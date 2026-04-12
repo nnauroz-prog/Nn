@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PflegeNews - Aktuelles aus der Pflegewelt</title>
+    <title>PflegeNews - Nachrichten aus der Pflegewelt</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,10 +11,9 @@
         <nav>
             <div class="logo">Pflege<span>News</span></div>
             <ul class="nav-links">
-                <li><a href="#home">Startseite</a></li>
                 <li><a href="#news">Nachrichten</a></li>
                 <li><a href="#themen">Themen</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#quellen">Quellen</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Menu">
                 <span></span>
@@ -25,60 +24,52 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Aktuelles aus der <span class="highlight">Pflegewelt</span></h1>
-                <p>Ihr Portal fuer Nachrichten, Ratgeber und Hintergruende rund um Pflege, Gesundheit und Soziales.</p>
-                <a href="#news" class="btn">Zu den Nachrichten</a>
-            </div>
-        </section>
-
         <section id="news" class="news">
             <div class="container">
-                <h2>Aktuelle Nachrichten</h2>
-                <p class="news-source-info">Live-Nachrichten aus deutschen Pflege- und Gesundheitsquellen</p>
-                <div id="news-loading" class="loading">Nachrichten werden geladen...</div>
-                <div id="news-grid" class="news-grid"></div>
+                <div class="section-header">
+                    <h1>Aktuelle Nachrichten</h1>
+                    <p class="section-sub">Pressemitteilungen der deutschen Krankenkassen</p>
+                </div>
+                <div id="news-grid" class="news-list">
+                    <div id="news-loading" class="loading">Nachrichten werden geladen...</div>
+                </div>
             </div>
         </section>
 
         <section id="themen" class="themen">
             <div class="container">
-                <h2>Unsere Themen</h2>
+                <h2>Themenbereiche</h2>
                 <div class="themen-grid">
                     <div class="thema-card">
-                        <div class="thema-icon">&#9879;</div>
                         <h3>Pflegepolitik</h3>
-                        <p>Gesetze, Reformen und politische Entscheidungen, die die Pflegebranche betreffen.</p>
+                        <p>Gesetze, Reformen und politische Entscheidungen rund um die Pflege.</p>
                     </div>
                     <div class="thema-card">
-                        <div class="thema-icon">&#9829;</div>
-                        <h3>Altenpflege</h3>
-                        <p>Nachrichten und Ratgeber rund um die Betreuung und Pflege aelterer Menschen.</p>
+                        <h3>Leistungen &amp; Recht</h3>
+                        <p>Pflegegrade, Ansprueche und Aenderungen bei Kassenleistungen.</p>
                     </div>
                     <div class="thema-card">
-                        <div class="thema-icon">&#9733;</div>
-                        <h3>Ausbildung &amp; Karriere</h3>
-                        <p>Wege in den Pflegeberuf, Weiterbildungen und Karrieremoglichkeiten.</p>
+                        <h3>Praevention</h3>
+                        <p>Vorsorge, Gesundheitsfoerderung und Praeventionsprogramme der Kassen.</p>
                     </div>
                     <div class="thema-card">
-                        <div class="thema-icon">&#9881;</div>
-                        <h3>Technik &amp; Innovation</h3>
-                        <p>Digitale Loesungen, Robotik und neue Technologien im Pflegebereich.</p>
+                        <h3>Digitalisierung</h3>
+                        <p>Digitale Gesundheitsanwendungen, E-Patientenakte und Telemedizin.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="newsletter" class="newsletter">
+        <section id="quellen" class="quellen">
             <div class="container">
-                <div class="newsletter-box">
-                    <h2>Newsletter abonnieren</h2>
-                    <p>Erhalten Sie die wichtigsten Pflegenews direkt in Ihr Postfach - kostenlos und woechentlich.</p>
-                    <form class="newsletter-form" onsubmit="handleSubscribe(event)">
-                        <input type="email" placeholder="Ihre E-Mail-Adresse" required>
-                        <button type="submit" class="btn">Abonnieren</button>
-                    </form>
+                <h2>Unsere Quellen</h2>
+                <p class="quellen-info">Alle Nachrichten stammen direkt aus den offiziellen Pressemitteilungen folgender Krankenkassen:</p>
+                <div class="quellen-grid">
+                    <div class="quelle">Barmer</div>
+                    <div class="quelle">Techniker Krankenkasse</div>
+                    <div class="quelle">AOK Bundesverband</div>
+                    <div class="quelle">DAK Gesundheit</div>
+                    <div class="quelle">Knappschaft</div>
                 </div>
             </div>
         </section>
@@ -86,30 +77,14 @@
 
     <footer>
         <div class="container footer-content">
-            <div class="footer-section">
+            <div class="footer-left">
                 <div class="footer-logo">Pflege<span>News</span></div>
-                <p>Ihr unabhaengiges Portal fuer Nachrichten aus der Pflegewelt.</p>
+                <p>Nachrichten aus offiziellen Quellen der deutschen Krankenkassen.</p>
             </div>
-            <div class="footer-section">
-                <h4>Themen</h4>
-                <ul>
-                    <li><a href="#">Pflegepolitik</a></li>
-                    <li><a href="#">Altenpflege</a></li>
-                    <li><a href="#">Ausbildung</a></li>
-                    <li><a href="#">Innovation</a></li>
-                </ul>
+            <div class="footer-right">
+                <a href="#">Impressum</a>
+                <a href="#">Datenschutz</a>
             </div>
-            <div class="footer-section">
-                <h4>Rechtliches</h4>
-                <ul>
-                    <li><a href="#">Impressum</a></li>
-                    <li><a href="#">Datenschutz</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 PflegeNews. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
@@ -118,14 +93,13 @@
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <button class="modal-close" aria-label="Schliessen">&times;</button>
-            <div class="modal-badge" id="modal-badge"></div>
+            <div class="modal-source-line" id="modal-source-line"></div>
             <h2 id="modal-title"></h2>
-            <div class="modal-meta">
-                <span id="modal-date"></span>
-                <span id="modal-source"></span>
-            </div>
+            <div class="modal-meta" id="modal-date"></div>
             <div id="modal-body" class="modal-body"></div>
-            <a id="modal-link" class="btn modal-link" href="#" target="_blank" rel="noopener">Originalartikel lesen</a>
+            <div class="modal-footer">
+                <a id="modal-link" class="modal-original-link" href="#" target="_blank" rel="noopener">Originalmeldung lesen &rarr;</a>
+            </div>
         </div>
     </div>
 
