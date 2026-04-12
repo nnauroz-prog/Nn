@@ -36,62 +36,9 @@
         <section id="news" class="news">
             <div class="container">
                 <h2>Aktuelle Nachrichten</h2>
-                <div class="news-grid">
-                    <article class="news-card featured">
-                        <div class="news-badge">Aktuell</div>
-                        <h3>Pflegereform 2026: Was sich fuer Pflegekraefte aendert</h3>
-                        <p>Die Bundesregierung hat neue Massnahmen zur Entlastung von Pflegekraeften beschlossen. Wir fassen die wichtigsten Aenderungen zusammen und erklaeren, was das fuer den Alltag bedeutet.</p>
-                        <div class="news-meta">
-                            <span class="news-date">12. April 2026</span>
-                            <span class="news-category">Politik</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">Ratgeber</div>
-                        <h3>Digitalisierung in der Pflege: Chancen und Herausforderungen</h3>
-                        <p>Digitale Tools koennen den Pflegealltag erleichtern. Ein Ueberblick ueber aktuelle Entwicklungen und praktische Tipps fuer die Umsetzung.</p>
-                        <div class="news-meta">
-                            <span class="news-date">10. April 2026</span>
-                            <span class="news-category">Digitalisierung</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">Studie</div>
-                        <h3>Fachkraeftemangel: Neue Zahlen zeigen dringenden Handlungsbedarf</h3>
-                        <p>Eine aktuelle Studie belegt den wachsenden Bedarf an Pflegefachkraeften. Experten fordern bessere Arbeitsbedingungen und hoehere Verguetung.</p>
-                        <div class="news-meta">
-                            <span class="news-date">8. April 2026</span>
-                            <span class="news-category">Arbeitswelt</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">Praxis</div>
-                        <h3>Selbstfuersorge im Pflegeberuf: So bleiben Sie gesund</h3>
-                        <p>Pflegekraefte geben taeglich viel von sich. Hier finden Sie praktische Tipps, um im stressigen Alltag auf Ihre eigene Gesundheit zu achten.</p>
-                        <div class="news-meta">
-                            <span class="news-date">5. April 2026</span>
-                            <span class="news-category">Gesundheit</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">Recht</div>
-                        <h3>Pflegegrad beantragen: Schritt-fuer-Schritt-Anleitung</h3>
-                        <p>Der Weg zum Pflegegrad kann kompliziert sein. Unser Leitfaden hilft Angehoerigen, den Antragsprozess erfolgreich zu durchlaufen.</p>
-                        <div class="news-meta">
-                            <span class="news-date">3. April 2026</span>
-                            <span class="news-category">Recht &amp; Soziales</span>
-                        </div>
-                    </article>
-                    <article class="news-card">
-                        <div class="news-badge">Interview</div>
-                        <h3>Im Gespraech: Wie sieht die Pflege der Zukunft aus?</h3>
-                        <p>Pflegewissenschaftlerin Prof. Dr. Mueller ueber neue Konzepte, technische Hilfsmittel und die Rolle der Gesellschaft.</p>
-                        <div class="news-meta">
-                            <span class="news-date">1. April 2026</span>
-                            <span class="news-category">Interview</span>
-                        </div>
-                    </article>
-                </div>
+                <p class="news-source-info">Live-Nachrichten aus deutschen Pflege- und Gesundheitsquellen</p>
+                <div id="news-loading" class="loading">Nachrichten werden geladen...</div>
+                <div id="news-grid" class="news-grid"></div>
             </div>
         </section>
 
@@ -165,6 +112,22 @@
             <p>&copy; 2026 PflegeNews. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+
+    <!-- Artikel-Detail Modal -->
+    <div id="article-modal" class="modal" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Schliessen">&times;</button>
+            <div class="modal-badge" id="modal-badge"></div>
+            <h2 id="modal-title"></h2>
+            <div class="modal-meta">
+                <span id="modal-date"></span>
+                <span id="modal-source"></span>
+            </div>
+            <div id="modal-body" class="modal-body"></div>
+            <a id="modal-link" class="btn modal-link" href="#" target="_blank" rel="noopener">Originalartikel lesen</a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
