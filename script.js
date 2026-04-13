@@ -1,3 +1,11 @@
+// === Dateline ===
+var dateEl = document.getElementById('current-date');
+if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString('de-DE', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+    });
+}
+
 // === Krankenkassen RSS Feeds (via presseportal.de) ===
 var RSS_FEEDS = [
     {

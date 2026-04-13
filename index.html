@@ -3,36 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PflegeNews - Nachrichten aus der Pflegewelt</title>
+    <title>PflegeNews - Fachportal fuer Pflege und Gesundheit</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Pflege<span>News</span></div>
+            <a href="index.html" class="logo">Pflege<span>News</span></a>
             <ul class="nav-links">
                 <li><a href="#news">Nachrichten</a></li>
+                <li><a href="#pflegegrade">Pflegegrade</a></li>
                 <li><a href="#themen">Themen</a></li>
                 <li><a href="#quellen">Quellen</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
         </nav>
     </header>
+
+    <div class="dateline">
+        <div class="container">
+            <span id="current-date"></span>
+            <span class="dateline-edition">Fachportal fuer Pflege &amp; Gesundheitswesen</span>
+        </div>
+    </div>
 
     <main>
         <section id="news" class="news">
             <div class="container">
                 <div class="section-header">
-                    <h1>Aktuelle Nachrichten</h1>
-                    <p class="section-sub">Pressemitteilungen der deutschen Krankenkassen</p>
+                    <h1>Aktuelle Fachmeldungen</h1>
+                    <p class="section-sub">Pressemitteilungen und Analysen aus dem Gesundheitswesen</p>
                 </div>
                 <div id="news-grid" class="news-list">
-                    <div id="news-loading" class="loading">Nachrichten werden geladen...</div>
+                    <div id="news-loading" class="loading">Meldungen werden geladen...</div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Pflegegrade Infografik -->
+        <section id="pflegegrade" class="pflegegrade-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Pflegegrade im Ueberblick</h2>
+                    <p class="section-sub">Leistungsansprueche nach Schwere der Beeintraechtigung (Stand 2026)</p>
+                </div>
+
+                <div class="pg-visual">
+                    <div class="pg-card" data-grade="1">
+                        <div class="pg-bar"><div class="pg-fill" style="--fill: 15%;"></div></div>
+                        <div class="pg-info">
+                            <div class="pg-number">PG 1</div>
+                            <div class="pg-label">Geringe Beeintraechtigung</div>
+                            <div class="pg-points">12,5 - 26,9 Punkte</div>
+                        </div>
+                        <div class="pg-leistung">
+                            <div class="pg-amount">125 &euro;</div>
+                            <div class="pg-type">Entlastungsbetrag/Monat</div>
+                        </div>
+                    </div>
+
+                    <div class="pg-card" data-grade="2">
+                        <div class="pg-bar"><div class="pg-fill" style="--fill: 35%;"></div></div>
+                        <div class="pg-info">
+                            <div class="pg-number">PG 2</div>
+                            <div class="pg-label">Erhebliche Beeintraechtigung</div>
+                            <div class="pg-points">27 - 47,4 Punkte</div>
+                        </div>
+                        <div class="pg-leistung">
+                            <div class="pg-amount">332 &euro;</div>
+                            <div class="pg-type">Pflegegeld/Monat</div>
+                            <div class="pg-sach">761 &euro; Sachleistung</div>
+                        </div>
+                    </div>
+
+                    <div class="pg-card" data-grade="3">
+                        <div class="pg-bar"><div class="pg-fill" style="--fill: 55%;"></div></div>
+                        <div class="pg-info">
+                            <div class="pg-number">PG 3</div>
+                            <div class="pg-label">Schwere Beeintraechtigung</div>
+                            <div class="pg-points">47,5 - 69,9 Punkte</div>
+                        </div>
+                        <div class="pg-leistung">
+                            <div class="pg-amount">573 &euro;</div>
+                            <div class="pg-type">Pflegegeld/Monat</div>
+                            <div class="pg-sach">1.432 &euro; Sachleistung</div>
+                        </div>
+                    </div>
+
+                    <div class="pg-card" data-grade="4">
+                        <div class="pg-bar"><div class="pg-fill" style="--fill: 78%;"></div></div>
+                        <div class="pg-info">
+                            <div class="pg-number">PG 4</div>
+                            <div class="pg-label">Schwerste Beeintraechtigung</div>
+                            <div class="pg-points">70 - 89,9 Punkte</div>
+                        </div>
+                        <div class="pg-leistung">
+                            <div class="pg-amount">765 &euro;</div>
+                            <div class="pg-type">Pflegegeld/Monat</div>
+                            <div class="pg-sach">1.778 &euro; Sachleistung</div>
+                        </div>
+                    </div>
+
+                    <div class="pg-card" data-grade="5">
+                        <div class="pg-bar"><div class="pg-fill" style="--fill: 100%;"></div></div>
+                        <div class="pg-info">
+                            <div class="pg-number">PG 5</div>
+                            <div class="pg-label">Schwerste Beeintr. mit bes. Anforderungen</div>
+                            <div class="pg-points">90 - 100 Punkte</div>
+                        </div>
+                        <div class="pg-leistung">
+                            <div class="pg-amount">947 &euro;</div>
+                            <div class="pg-type">Pflegegeld/Monat</div>
+                            <div class="pg-sach">2.200 &euro; Sachleistung</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pg-module-grid">
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 44V30a12 12 0 0 1 24 0v14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="38" x2="30" y2="38" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Mobilitaet</h3>
+                        <div class="pg-module-weight">10%</div>
+                        <p>Fortbewegen, Treppensteigen, Positionswechsel im Bett</p>
+                    </div>
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 14h4v6h-4M26 14h4v4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 32h20v8H14z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Kognition</h3>
+                        <div class="pg-module-weight">15%</div>
+                        <p>Orientierung, Erkennen von Personen, Entscheidungsfaehigkeit</p>
+                    </div>
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 42s-14-10-14-20a14 14 0 0 1 28 0c0 10-14 20-14 20z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Verhalten</h3>
+                        <div class="pg-module-weight">15%</div>
+                        <p>Psychische Problemlagen, naechtliche Unruhe, Aengste</p>
+                    </div>
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><rect x="10" y="8" width="28" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="18" x2="30" y2="18" stroke="currentColor" stroke-width="2"/><line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2"/><line x1="18" y1="30" x2="26" y2="30" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Selbstversorgung</h3>
+                        <div class="pg-module-weight">40%</div>
+                        <p>Koerperpflege, Ernaehrung, An- und Auskleiden</p>
+                    </div>
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M8 24h32" stroke="currentColor" stroke-width="2"/><path d="M24 8v32" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Krankheit</h3>
+                        <div class="pg-module-weight">20%</div>
+                        <p>Medikation, Arztbesuche, Therapiemassnahmen</p>
+                    </div>
+                    <div class="pg-module">
+                        <div class="pg-module-icon">
+                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 36c0-6 4-10 6-10h4M28 26h4c2 0 6 4 6 10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="2"/></svg>
+                        </div>
+                        <h3>Alltag &amp; Soziales</h3>
+                        <div class="pg-module-weight">15%*</div>
+                        <p>Tagesablauf, soziale Kontakte, Ruhezeiten</p>
+                    </div>
+                </div>
+                <p class="pg-footnote">* Gewichtung gem. NBA (Neues Begutachtungsassessment). Modul 1 fliesst nur mit 10% ein, Modul 4 (Selbstversorgung) hat mit 40% das groesste Gewicht.</p>
             </div>
         </section>
 
@@ -42,19 +179,19 @@
                 <div class="themen-grid">
                     <a href="pflegepolitik.html" target="_blank" class="thema-card">
                         <h3>Pflegepolitik</h3>
-                        <p>Gesetze, Reformen und politische Entscheidungen rund um die Pflege.</p>
+                        <p>Gesetze, Reformen und Positionspapiere der Kassen</p>
                     </a>
                     <a href="leistungen.html" target="_blank" class="thema-card">
                         <h3>Leistungen &amp; Recht</h3>
-                        <p>Pflegegrade, Ansprueche und Aenderungen bei Kassenleistungen.</p>
+                        <p>Pflegegrade, Ansprueche, SGB XI Aenderungen</p>
                     </a>
                     <a href="praevention.html" target="_blank" class="thema-card">
                         <h3>Praevention</h3>
-                        <p>Vorsorge, Gesundheitsfoerderung und Praeventionsprogramme der Kassen.</p>
+                        <p>Sturzpraevention, Demenzvorbeugung, Gesundheitsfoerderung</p>
                     </a>
                     <a href="digitalisierung.html" target="_blank" class="thema-card">
                         <h3>Digitalisierung</h3>
-                        <p>Digitale Gesundheitsanwendungen, E-Patientenakte und Telemedizin.</p>
+                        <p>ePA, DiGA, Telemedizin, digitale Dokumentation</p>
                     </a>
                 </div>
             </div>
@@ -62,10 +199,10 @@
 
         <section id="quellen" class="quellen">
             <div class="container">
-                <h2>Unsere Quellen</h2>
-                <p class="quellen-info">Alle Nachrichten stammen direkt aus den offiziellen Pressemitteilungen folgender Krankenkassen:</p>
+                <h2>Redaktionelle Quellen</h2>
+                <p class="quellen-info">Alle Fachmeldungen basieren auf offiziellen Pressemitteilungen und Berichten folgender Institutionen:</p>
                 <div class="quellen-grid">
-                    <div class="quelle">Barmer</div>
+                    <div class="quelle">BARMER</div>
                     <div class="quelle">Techniker Krankenkasse</div>
                     <div class="quelle">AOK Bundesverband</div>
                     <div class="quelle">DAK Gesundheit</div>
@@ -79,7 +216,7 @@
         <div class="container footer-content">
             <div class="footer-left">
                 <div class="footer-logo">Pflege<span>News</span></div>
-                <p>Nachrichten aus offiziellen Quellen der deutschen Krankenkassen.</p>
+                <p>Unabhaengiges Fachportal fuer das Gesundheits- und Pflegewesen</p>
             </div>
             <div class="footer-right">
                 <a href="#">Impressum</a>
