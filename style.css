@@ -346,14 +346,11 @@ footer {
 }
 .modal-close:hover { color: var(--text); }
 
-.modal-source-line {
+.modal-author {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent);
-    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
 }
 
 .modal-content h2 {
@@ -377,20 +374,15 @@ footer {
 }
 .modal-body p { margin-bottom: 1rem; }
 
-.modal-footer {
+.modal-sources {
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border);
-}
-
-.modal-original-link {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 0.9rem;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-style: italic;
 }
-.modal-original-link:hover { text-decoration: underline; }
 
 /* Topic Pages */
 .topic-page {
