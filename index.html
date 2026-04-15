@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PflegeNews - Fachportal fuer Pflege und Gesundheit</title>
+    <title>PflegeInfo &ndash; Informationsportal zur Pflege in Deutschland</title>
+    <meta name="description" content="Unabh&auml;ngiges Informationsportal zu Pflegegraden, Leistungsanspr&uuml;chen, SGB XI und aktuellen Rechten pflegebed&uuml;rftiger Menschen und ihrer Angeh&ouml;rigen.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">Pflege<span>News</span></a>
+            <a href="index.html" class="logo">Pflege<span>Info</span></a>
             <ul class="nav-links">
-                <li><a href="#news">Nachrichten</a></li>
+                <li><a href="#ueberblick">&Uuml;berblick</a></li>
                 <li><a href="#pflegegrade">Pflegegrade</a></li>
                 <li><a href="#themen">Themen</a></li>
+                <li><a href="#rechte">Rechte</a></li>
                 <li><a href="#quellen">Quellen</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -23,38 +25,56 @@
     <div class="dateline">
         <div class="container">
             <span id="current-date"></span>
-            <span class="dateline-edition">Fachportal fuer Pflege &amp; Gesundheitswesen</span>
+            <span class="dateline-edition">Informationsportal &middot; Stand: April 2026</span>
         </div>
     </div>
 
     <main>
-        <section id="news" class="news">
+        <section id="ueberblick" class="hero">
             <div class="container">
                 <div class="section-header">
-                    <h1>Aktuelle Fachmeldungen</h1>
-                    <p class="section-sub">Pressemitteilungen und Analysen aus dem Gesundheitswesen</p>
+                    <h1>Pflege in Deutschland verst&auml;ndlich erkl&auml;rt</h1>
+                    <p class="section-sub">Unabh&auml;ngige Informationen zu Pflegegraden, Leistungen, Rechten und aktuellen Regelungen nach SGB XI</p>
                 </div>
-                <div id="news-grid" class="news-list">
-                    <div id="news-loading" class="loading">Meldungen werden geladen...</div>
+                <p class="hero-lead">Dieses Portal richtet sich an pflegebed&uuml;rftige Menschen, pflegende Angeh&ouml;rige und Fachkr&auml;fte. Es fasst die wichtigsten gesetzlichen Grundlagen, Leistungsanspr&uuml;che und Verfahren der deutschen Pflegeversicherung zusammen &ndash; gest&uuml;tzt auf das Sozialgesetzbuch XI, Ver&ouml;ffentlichungen der gesetzlichen Krankenkassen und anerkannter Fachinstitutionen.</p>
+
+                <div class="quick-nav">
+                    <a href="#pflegegrade" class="quick-nav-item">
+                        <div class="quick-nav-num">01</div>
+                        <div class="quick-nav-text"><strong>Pflegegrade</strong><span>Einstufung und Leistungsbetr&auml;ge</span></div>
+                    </a>
+                    <a href="leistungen.html" target="_blank" class="quick-nav-item">
+                        <div class="quick-nav-num">02</div>
+                        <div class="quick-nav-text"><strong>Leistungen &amp; Recht</strong><span>Anspr&uuml;che, Antrag, Widerspruch</span></div>
+                    </a>
+                    <a href="pflegepolitik.html" target="_blank" class="quick-nav-item">
+                        <div class="quick-nav-num">03</div>
+                        <div class="quick-nav-text"><strong>Pflegepolitik</strong><span>Gesetze, Reformen, Entwicklung</span></div>
+                    </a>
+                    <a href="praevention.html" target="_blank" class="quick-nav-item">
+                        <div class="quick-nav-num">04</div>
+                        <div class="quick-nav-text"><strong>Pr&auml;vention</strong><span>Vorbeugen und Gesundheit st&auml;rken</span></div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Pflegegrade Infografik -->
         <section id="pflegegrade" class="pflegegrade-section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Pflegegrade im Ueberblick</h2>
-                    <p class="section-sub">Leistungsansprueche nach Schwere der Beeintraechtigung (Stand 2026)</p>
+                    <h2>Pflegegrade im &Uuml;berblick</h2>
+                    <p class="section-sub">Einstufung und monatliche Leistungsbetr&auml;ge gem&auml;&szlig; &sect;&sect; 14, 15, 36, 37 SGB XI (Stand 2026)</p>
                 </div>
+
+                <p class="section-intro">Seit 2017 wird die Pflegebed&uuml;rftigkeit nicht mehr nach Zeitaufwand, sondern anhand der Selbst&auml;ndigkeit einer Person beurteilt. Das <strong>Neue Begutachtungsassessment (NBA)</strong> ermittelt einen Gesamtpunktwert zwischen 0 und 100. Daraus ergibt sich einer von f&uuml;nf Pflegegraden.</p>
 
                 <div class="pg-visual">
                     <div class="pg-card" data-grade="1">
                         <div class="pg-bar"><div class="pg-fill" style="--fill: 15%;"></div></div>
                         <div class="pg-info">
                             <div class="pg-number">PG 1</div>
-                            <div class="pg-label">Geringe Beeintraechtigung</div>
-                            <div class="pg-points">12,5 - 26,9 Punkte</div>
+                            <div class="pg-label">Geringe Beeintr&auml;chtigung</div>
+                            <div class="pg-points">12,5 &ndash; 26,9 Punkte</div>
                         </div>
                         <div class="pg-leistung">
                             <div class="pg-amount">125 &euro;</div>
@@ -66,8 +86,8 @@
                         <div class="pg-bar"><div class="pg-fill" style="--fill: 35%;"></div></div>
                         <div class="pg-info">
                             <div class="pg-number">PG 2</div>
-                            <div class="pg-label">Erhebliche Beeintraechtigung</div>
-                            <div class="pg-points">27 - 47,4 Punkte</div>
+                            <div class="pg-label">Erhebliche Beeintr&auml;chtigung</div>
+                            <div class="pg-points">27 &ndash; 47,4 Punkte</div>
                         </div>
                         <div class="pg-leistung">
                             <div class="pg-amount">332 &euro;</div>
@@ -80,8 +100,8 @@
                         <div class="pg-bar"><div class="pg-fill" style="--fill: 55%;"></div></div>
                         <div class="pg-info">
                             <div class="pg-number">PG 3</div>
-                            <div class="pg-label">Schwere Beeintraechtigung</div>
-                            <div class="pg-points">47,5 - 69,9 Punkte</div>
+                            <div class="pg-label">Schwere Beeintr&auml;chtigung</div>
+                            <div class="pg-points">47,5 &ndash; 69,9 Punkte</div>
                         </div>
                         <div class="pg-leistung">
                             <div class="pg-amount">573 &euro;</div>
@@ -94,8 +114,8 @@
                         <div class="pg-bar"><div class="pg-fill" style="--fill: 78%;"></div></div>
                         <div class="pg-info">
                             <div class="pg-number">PG 4</div>
-                            <div class="pg-label">Schwerste Beeintraechtigung</div>
-                            <div class="pg-points">70 - 89,9 Punkte</div>
+                            <div class="pg-label">Schwerste Beeintr&auml;chtigung</div>
+                            <div class="pg-points">70 &ndash; 89,9 Punkte</div>
                         </div>
                         <div class="pg-leistung">
                             <div class="pg-amount">765 &euro;</div>
@@ -108,8 +128,8 @@
                         <div class="pg-bar"><div class="pg-fill" style="--fill: 100%;"></div></div>
                         <div class="pg-info">
                             <div class="pg-number">PG 5</div>
-                            <div class="pg-label">Schwerste Beeintr. mit bes. Anforderungen</div>
-                            <div class="pg-points">90 - 100 Punkte</div>
+                            <div class="pg-label">Schwerste Beeintr. mit besonderen Anforderungen</div>
+                            <div class="pg-points">90 &ndash; 100 Punkte</div>
                         </div>
                         <div class="pg-leistung">
                             <div class="pg-amount">947 &euro;</div>
@@ -119,79 +139,119 @@
                     </div>
                 </div>
 
+                <h3 class="subheading">Die sechs Module des NBA und ihre Gewichtung</h3>
+                <p class="section-intro">Das Begutachtungsassessment erfasst in sechs Lebensbereichen, wie selbstst&auml;ndig eine Person ihren Alltag bew&auml;ltigen kann. Die Module flie&szlig;en mit unterschiedlichem Gewicht in die Gesamtbewertung ein.</p>
+
                 <div class="pg-module-grid">
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 44V30a12 12 0 0 1 24 0v14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="38" x2="30" y2="38" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
-                        <h3>Mobilitaet</h3>
-                        <div class="pg-module-weight">10%</div>
-                        <p>Fortbewegen, Treppensteigen, Positionswechsel im Bett</p>
+                        <h3>Mobilit&auml;t</h3>
+                        <div class="pg-module-weight">10&nbsp;%</div>
+                        <p>Positionswechsel, Fortbewegen, Treppensteigen</p>
                     </div>
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 14h4v6h-4M26 14h4v4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 32h20v8H14z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
-                        <h3>Kognition</h3>
-                        <div class="pg-module-weight">15%</div>
-                        <p>Orientierung, Erkennen von Personen, Entscheidungsfaehigkeit</p>
+                        <h3>Kognition &amp; Kommunikation</h3>
+                        <div class="pg-module-weight">15&nbsp;%*</div>
+                        <p>Orientierung, Personen erkennen, Entscheidungen treffen</p>
                     </div>
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 42s-14-10-14-20a14 14 0 0 1 28 0c0 10-14 20-14 20z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
-                        <h3>Verhalten</h3>
-                        <div class="pg-module-weight">15%</div>
-                        <p>Psychische Problemlagen, naechtliche Unruhe, Aengste</p>
+                        <h3>Verhalten &amp; Psyche</h3>
+                        <div class="pg-module-weight">15&nbsp;%*</div>
+                        <p>Psychische Problemlagen, n&auml;chtliche Unruhe, &Auml;ngste</p>
                     </div>
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><rect x="10" y="8" width="28" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="18" x2="30" y2="18" stroke="currentColor" stroke-width="2"/><line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2"/><line x1="18" y1="30" x2="26" y2="30" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
                         <h3>Selbstversorgung</h3>
-                        <div class="pg-module-weight">40%</div>
-                        <p>Koerperpflege, Ernaehrung, An- und Auskleiden</p>
+                        <div class="pg-module-weight">40&nbsp;%</div>
+                        <p>K&ouml;rperpflege, Ern&auml;hrung, An- und Auskleiden</p>
                     </div>
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><path d="M8 24h32" stroke="currentColor" stroke-width="2"/><path d="M24 8v32" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
-                        <h3>Krankheit</h3>
-                        <div class="pg-module-weight">20%</div>
-                        <p>Medikation, Arztbesuche, Therapiemassnahmen</p>
+                        <h3>Krankheits&shy;bew&auml;ltigung</h3>
+                        <div class="pg-module-weight">20&nbsp;%</div>
+                        <p>Medikation, Arztbesuche, therapeutische Ma&szlig;nahmen</p>
                     </div>
                     <div class="pg-module">
                         <div class="pg-module-icon">
                             <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 36c0-6 4-10 6-10h4M28 26h4c2 0 6 4 6 10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="2"/></svg>
                         </div>
                         <h3>Alltag &amp; Soziales</h3>
-                        <div class="pg-module-weight">15%*</div>
-                        <p>Tagesablauf, soziale Kontakte, Ruhezeiten</p>
+                        <div class="pg-module-weight">15&nbsp;%</div>
+                        <p>Tagesgestaltung, soziale Kontakte, Ruhephasen</p>
                     </div>
                 </div>
-                <p class="pg-footnote">* Gewichtung gem. NBA (Neues Begutachtungsassessment). Modul 1 fliesst nur mit 10% ein, Modul 4 (Selbstversorgung) hat mit 40% das groesste Gewicht.</p>
+                <p class="pg-footnote">* Aus den Modulen 2 (Kognition) und 3 (Verhalten) wird nur der jeweils h&ouml;here Wert in die Gesamtbewertung &uuml;bernommen; zusammen flie&szlig;en sie mit 15&nbsp;% ein. Rechtsgrundlage: &sect; 15 SGB XI in Verbindung mit den Begutachtungsrichtlinien des Medizinischen Dienstes.</p>
+            </div>
+        </section>
+
+        <section id="rechte" class="rechte">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Ihre Rechte auf einen Blick</h2>
+                    <p class="section-sub">Zentrale Anspr&uuml;che aus dem Pflegeversicherungsrecht (SGB XI)</p>
+                </div>
+
+                <div class="rechte-grid">
+                    <div class="recht-card">
+                        <h3>Recht auf Begutachtung</h3>
+                        <p>Die Pflegekasse muss innerhalb von <strong>25 Arbeitstagen</strong> nach Antragseingang &uuml;ber den Pflegegrad entscheiden (&sect; 18 Abs. 3 SGB XI). Bei &Uuml;berschreitung steht Ihnen 70&nbsp;&euro; je angefangener Woche Verz&ouml;gerung zu.</p>
+                    </div>
+                    <div class="recht-card">
+                        <h3>Recht auf Pflegeberatung</h3>
+                        <p>Jede pflegebed&uuml;rftige Person hat Anspruch auf <strong>individuelle und kostenlose Pflegeberatung</strong> nach &sect; 7a SGB XI &ndash; telefonisch, in einem Pflegest&uuml;tzpunkt oder zu Hause.</p>
+                    </div>
+                    <div class="recht-card">
+                        <h3>Recht auf Wunsch- und Wahlrecht</h3>
+                        <p>Pflegebed&uuml;rftige d&uuml;rfen im Rahmen der Leistungen w&auml;hlen, von welchem zugelassenen Pflegedienst oder welcher Einrichtung sie versorgt werden (&sect; 2 Abs. 2 SGB XI).</p>
+                    </div>
+                    <div class="recht-card">
+                        <h3>Recht auf Widerspruch</h3>
+                        <p>Gegen jeden Bescheid kann innerhalb <strong>eines Monats</strong> schriftlich Widerspruch eingelegt werden (&sect; 84 SGG). Das Widerspruchsverfahren ist kostenfrei.</p>
+                    </div>
+                    <div class="recht-card">
+                        <h3>Pflegezeit &amp; Familienpflegezeit</h3>
+                        <p>Arbeitnehmer k&ouml;nnen bis zu <strong>6 Monate Pflegezeit</strong> (PflegeZG) bzw. bis zu <strong>24 Monate Familienpflegezeit</strong> (FPfZG) in Anspruch nehmen. K&uuml;ndigungsschutz besteht ab Ank&uuml;ndigung.</p>
+                    </div>
+                    <div class="recht-card">
+                        <h3>Zuschuss f&uuml;r Wohnumfeld</h3>
+                        <p>Pro wohnumfeldverbessernder Ma&szlig;nahme bis zu <strong>4.180&nbsp;&euro;</strong> Zuschuss (&sect; 40 Abs. 4 SGB XI) &ndash; etwa f&uuml;r Treppenlift, Badumbau oder T&uuml;rverbreiterung.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="themen" class="themen">
             <div class="container">
                 <h2>Themenbereiche</h2>
+                <p class="themen-intro">Vertiefende Informationsseiten mit rechtlichem Hintergrund, Verfahrensabl&auml;ufen und Leistungs&uuml;bersichten:</p>
                 <div class="themen-grid">
                     <a href="pflegepolitik.html" target="_blank" class="thema-card">
                         <h3>Pflegepolitik</h3>
-                        <p>Gesetze, Reformen und Positionspapiere der Kassen</p>
+                        <p>Pflegeversicherungsgesetz, Reformen 1995&ndash;2026, aktuelle gesetzgeberische Entwicklungen</p>
                     </a>
                     <a href="leistungen.html" target="_blank" class="thema-card">
                         <h3>Leistungen &amp; Recht</h3>
-                        <p>Pflegegrade, Ansprueche, SGB XI Aenderungen</p>
+                        <p>Pflegegeld, Sachleistungen, Verhinderungs- und Kurzzeitpflege, Widerspruchsverfahren</p>
                     </a>
                     <a href="praevention.html" target="_blank" class="thema-card">
-                        <h3>Praevention</h3>
-                        <p>Sturzpraevention, Demenzvorbeugung, Gesundheitsfoerderung</p>
+                        <h3>Pr&auml;vention</h3>
+                        <p>Sturzpr&auml;vention, Demenzvorbeugung, Gesundheitsf&ouml;rderung f&uuml;r Angeh&ouml;rige</p>
                     </a>
                     <a href="digitalisierung.html" target="_blank" class="thema-card">
                         <h3>Digitalisierung</h3>
-                        <p>ePA, DiGA, Telemedizin, digitale Dokumentation</p>
+                        <p>Elektronische Patientenakte (ePA), DiGA, Telemedizin, digitale Pflegedokumentation</p>
                     </a>
                 </div>
             </div>
@@ -199,14 +259,33 @@
 
         <section id="quellen" class="quellen">
             <div class="container">
-                <h2>Redaktionelle Quellen</h2>
-                <p class="quellen-info">Alle Fachmeldungen basieren auf offiziellen Pressemitteilungen und Berichten folgender Institutionen:</p>
+                <h2>Rechtsgrundlagen und redaktionelle Quellen</h2>
+                <p class="quellen-info">Die Inhalte dieses Portals st&uuml;tzen sich auf die nachstehenden Rechtsgrundlagen sowie ver&ouml;ffentlichte Informationen offizieller Stellen und gesetzlicher Krankenkassen:</p>
+
+                <h3 class="subheading-small">Gesetzliche Grundlagen</h3>
+                <ul class="law-list">
+                    <li><strong>SGB XI</strong> &ndash; Soziale Pflegeversicherung (insb. &sect;&sect; 14, 15, 18, 36, 37, 39, 40, 42, 45a, 45b)</li>
+                    <li><strong>SGB V</strong> &ndash; Gesetzliche Krankenversicherung (Schnittstellen zur h&auml;uslichen Krankenpflege)</li>
+                    <li><strong>PflegeZG</strong> &ndash; Pflegezeitgesetz &middot; <strong>FPfZG</strong> &ndash; Familienpflegezeitgesetz</li>
+                    <li><strong>Begutachtungs-Richtlinien</strong> des Medizinischen Dienstes Bund</li>
+                </ul>
+
+                <h3 class="subheading-small">Institutionelle Quellen</h3>
                 <div class="quellen-grid">
                     <div class="quelle">BARMER</div>
                     <div class="quelle">Techniker Krankenkasse</div>
                     <div class="quelle">AOK Bundesverband</div>
                     <div class="quelle">DAK Gesundheit</div>
                     <div class="quelle">Knappschaft</div>
+                    <div class="quelle">Medizinischer Dienst Bund</div>
+                    <div class="quelle">Bundesgesundheits&shy;ministerium</div>
+                    <div class="quelle">Statistisches Bundesamt</div>
+                </div>
+
+                <div class="disclaimer">
+                    <strong>Wichtiger Hinweis</strong>
+                    <p>Dieses Portal bietet eine allgemein verst&auml;ndliche &Uuml;bersicht zum deutschen Pflegesystem und ersetzt <strong>keine individuelle Rechts-, Sozial- oder Pflegeberatung</strong>. Verbindliche Ausk&uuml;nfte erhalten Sie bei Ihrer Pflegekasse, anerkannten Pflegest&uuml;tzpunkten (Verzeichnis unter <em>zqp.de</em>) oder zugelassenen Pflegeberaterinnen und -beratern nach &sect; 7a SGB XI. S&auml;mtliche Angaben wurden sorgf&auml;ltig recherchiert; ma&szlig;geblich sind jedoch stets die zum Zeitpunkt der Leistungsgew&auml;hrung geltenden gesetzlichen Regelungen und Bescheide der zust&auml;ndigen Stellen.</p>
+                    <p class="disclaimer-stand">Stand der Informationen: April 2026 &middot; N&auml;chste redaktionelle Pr&uuml;fung: laufend</p>
                 </div>
             </div>
         </section>
@@ -215,8 +294,8 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <div class="footer-logo">Pflege<span>News</span></div>
-                <p>Unabhaengiges Fachportal fuer das Gesundheits- und Pflegewesen</p>
+                <div class="footer-logo">Pflege<span>Info</span></div>
+                <p>Unabh&auml;ngiges Informationsportal zur Pflege in Deutschland</p>
             </div>
             <div class="footer-right">
                 <a href="#">Impressum</a>
@@ -224,19 +303,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Artikel-Detail Modal -->
-    <div id="article-modal" class="modal" hidden>
-        <div class="modal-overlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Schliessen">&times;</button>
-            <div class="modal-author">Von PflegeNews-Redaktion</div>
-            <h2 id="modal-title"></h2>
-            <div class="modal-meta" id="modal-date"></div>
-            <div id="modal-body" class="modal-body"></div>
-            <div class="modal-sources" id="modal-sources"></div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
