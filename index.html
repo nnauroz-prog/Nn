@@ -200,23 +200,42 @@
                         </div>
                     </div>
                     <div class="hero-illustration">
-                        <svg viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Map-like illustration -->
-                            <rect x="30" y="30" width="240" height="180" rx="16" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
-                            <!-- Streets -->
-                            <path d="M50 120 H250" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
-                            <path d="M150 50 V210" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
-                            <path d="M80 80 L220 170" stroke="#e0f2fe" stroke-width="5" stroke-linecap="round"/>
-                            <!-- Location pin -->
-                            <path d="M150 85 C150 70, 165 62, 172 70 C179 62, 194 70, 194 85 C194 102, 172 115, 172 115 C172 115, 150 102, 150 85 Z" fill="#3b82f6"/>
-                            <circle cx="172" cy="87" r="8" fill="#ffffff"/>
-                            <circle cx="172" cy="87" r="4" fill="#3b82f6"/>
-                            <!-- Small buildings -->
-                            <rect x="60" y="135" width="25" height="30" rx="3" fill="#bae6fd"/>
-                            <rect x="95" y="140" width="20" height="25" rx="3" fill="#93c5fd"/>
-                            <rect x="200" y="130" width="30" height="35" rx="3" fill="#bae6fd"/>
-                            <!-- Label -->
-                            <text x="150" y="225" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="700" font-family="Inter, sans-serif">Hamburg-Eilbek</text>
+                        <svg viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Hamburg Umriss (vereinfacht) -->
+                            <path d="M60 80 C70 60, 100 45, 130 40 C160 35, 200 38, 240 45 C270 50, 300 65, 310 90 C320 115, 315 140, 310 160 C305 180, 295 200, 280 220 C265 240, 240 255, 210 262 C180 270, 150 268, 125 260 C100 252, 75 235, 60 215 C45 195, 42 170, 45 145 C48 120, 52 100, 60 80 Z" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"/>
+                            <!-- Alster (Wasser) -->
+                            <ellipse cx="175" cy="135" rx="18" ry="12" fill="#bae6fd" opacity="0.6"/>
+                            <ellipse cx="168" cy="115" rx="8" ry="6" fill="#bae6fd" opacity="0.5"/>
+                            <!-- Elbe -->
+                            <path d="M50 200 C80 195, 120 198, 160 195 C200 192, 250 188, 310 185" stroke="#bae6fd" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+                            <!-- Andere Stadtteile (dezent) -->
+                            <path d="M90 90 C100 85, 120 82, 135 88 C140 100, 135 115, 125 120 C110 118, 95 105, 90 90 Z" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" opacity="0.5"/>
+                            <text x="112" y="104" text-anchor="middle" fill="#94a3b8" font-size="7" font-family="Inter, sans-serif">Eppendorf</text>
+                            <path d="M230 85 C245 80, 265 85, 275 95 C278 108, 270 120, 258 122 C245 118, 232 105, 230 85 Z" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" opacity="0.5"/>
+                            <text x="253" y="104" text-anchor="middle" fill="#94a3b8" font-size="7" font-family="Inter, sans-serif">Wandsbek</text>
+                            <path d="M120 195 C135 190, 155 192, 165 200 C168 212, 158 222, 145 225 C130 222, 118 210, 120 195 Z" fill="#e0f2fe" stroke="#bae6fd" stroke-width="1" opacity="0.5"/>
+                            <text x="143" y="210" text-anchor="middle" fill="#94a3b8" font-size="7" font-family="Inter, sans-serif">Hamm</text>
+                            <!-- BARMBEK-S&Uuml;D (hervorgehoben) -->
+                            <path d="M168 72 C182 68, 200 70, 212 78 C218 88, 215 102, 205 108 C192 112, 175 108, 168 98 C163 88, 164 78, 168 72 Z" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
+                            <text x="190" y="92" text-anchor="middle" fill="#1e40af" font-size="8" font-weight="700" font-family="Inter, sans-serif">Barmbek-S.</text>
+                            <!-- HOHENFELDE (hervorgehoben) -->
+                            <path d="M152 120 C162 116, 178 118, 185 126 C188 135, 183 145, 173 148 C162 146, 150 138, 148 130 C147 125, 149 122, 152 120 Z" fill="#dbeafe" stroke="#3b82f6" stroke-width="2.5"/>
+                            <text x="167" y="135" text-anchor="middle" fill="#1e40af" font-size="8" font-weight="700" font-family="Inter, sans-serif">Hohenfelde</text>
+                            <!-- EILBEK (hervorgehoben, gr&ouml;&szlig;er + Standort-Pin) -->
+                            <path d="M192 112 C208 108, 228 112, 238 122 C244 134, 240 150, 228 156 C214 160, 196 155, 188 145 C182 135, 184 120, 192 112 Z" fill="#bfdbfe" stroke="#1e40af" stroke-width="3"/>
+                            <text x="213" y="136" text-anchor="middle" fill="#1e40af" font-size="9.5" font-weight="800" font-family="Inter, sans-serif">Eilbek</text>
+                            <!-- Standort-Pin auf Eilbek -->
+                            <path d="M213 108 C213 100, 221 96, 225 100 C229 96, 237 100, 237 108 C237 117, 225 124, 225 124 C225 124, 213 117, 213 108 Z" fill="#f97316"/>
+                            <circle cx="225" cy="108" r="3.5" fill="#ffffff"/>
+                            <!-- Verbindungslinien zwischen den Gebieten -->
+                            <path d="M195 108 L190 92" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+                            <path d="M188 130 L185 126" stroke="#3b82f6" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+                            <!-- Legende -->
+                            <rect x="70" y="255" width="220" height="40" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="1.5"/>
+                            <rect x="85" y="268" width="12" height="12" rx="2" fill="#bfdbfe" stroke="#1e40af" stroke-width="1.5"/>
+                            <text x="103" y="278" fill="#1e40af" font-size="8" font-weight="600" font-family="Inter, sans-serif">Unser Einsatzgebiet</text>
+                            <circle cx="215" cy="274" r="5" fill="#f97316"/>
+                            <text x="225" y="278" fill="#475569" font-size="7.5" font-family="Inter, sans-serif">Standort</text>
                         </svg>
                     </div>
                 </div>
