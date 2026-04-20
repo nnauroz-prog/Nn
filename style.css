@@ -99,7 +99,7 @@ nav {
     text-transform: uppercase; letter-spacing: 0.04em;
 }
 .hero-illustration { display: flex; justify-content: center; align-items: center; }
-.hero-illustration svg { width: 100%; max-width: 380px; height: auto; }
+.hero-illustration svg { width: 100%; max-width: 320px; height: auto; }
 
 /* === CTA Buttons === */
 .btn {
@@ -235,12 +235,13 @@ nav {
 
 /* === About / Foto Section === */
 .about-content {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+    display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: center;
+    max-width: 800px; margin: 0 auto;
 }
 .about-photo img {
-    width: 100%; border-radius: var(--radius);
+    width: 280px; height: 340px; border-radius: var(--radius);
     box-shadow: var(--shadow-hover);
-    object-fit: cover; max-height: 400px;
+    object-fit: cover; object-position: top;
 }
 .about-text h2 {
     font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;
@@ -552,8 +553,8 @@ a.thema-card { display: block; text-decoration: none; color: inherit; }
     .leistungen-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: 1fr; }
 
-    .about-content { grid-template-columns: 1fr; gap: 1.5rem; }
-    .about-photo img { max-height: 300px; }
+    .about-content { grid-template-columns: 1fr; gap: 1.5rem; max-width: 100%; text-align: center; }
+    .about-photo img { width: 220px; height: 280px; margin: 0 auto; }
     .footer-content { flex-direction: column; gap: 0.75rem; text-align: center; }
     .section-header h2 { font-size: 1.4rem; }
     .contact-box { padding: 2rem 1.5rem; }
