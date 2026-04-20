@@ -3,289 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PflegeInfo &ndash; Informationsportal zur Pflege in Deutschland</title>
-    <meta name="description" content="Unabh&auml;ngiges Informationsportal zu Pflegegraden, Leistungsanspr&uuml;chen, SGB XI und aktuellen Rechten pflegebed&uuml;rftiger Menschen und ihrer Angeh&ouml;rigen.">
+    <title>Ambulanter Pflegedienst Eilbek &ndash; Medicare Team Eilbek</title>
+    <meta name="description" content="Ihr ambulanter Pflegedienst in Hamburg-Eilbek: Grundpflege, Behandlungspflege &amp; Hauswirtschaft. Pers&ouml;nliche Bezugspflege, schnelle Aufnahme. Jetzt kostenlos beraten lassen.">
+    <meta name="keywords" content="Ambulanter Pflegedienst Eilbek, Pflege in Hamburg Eilbek, h&auml;usliche Pflege Eilbek, Pflegedienst Hamburg Eilbek">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">Pflege<span>Info</span></a>
+            <a href="index.html" class="logo">Medicare <span>Team Eilbek</span></a>
             <ul class="nav-links">
-                <li><a href="#ueberblick">&Uuml;berblick</a></li>
-                <li><a href="#pflegegrade">Pflegegrade</a></li>
-                <li><a href="#themen">Themen</a></li>
-                <li><a href="#rechte">Rechte</a></li>
-                <li><a href="#quellen">Quellen</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#warum">Warum wir</a></li>
+                <li><a href="#ablauf">So geht&rsquo;s</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
-            <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+            <button class="menu-toggle" aria-label="Men&uuml;"><span></span><span></span><span></span></button>
         </nav>
     </header>
 
-    <div class="dateline">
-        <div class="container">
-            <span id="current-date"></span>
-            <span class="dateline-edition">Informationsportal &middot; Stand: April 2026</span>
-        </div>
-    </div>
-
     <main>
-        <section id="ueberblick" class="hero">
+        <!-- Hero -->
+        <section class="hero">
             <div class="container">
-                <div class="section-header">
-                    <h1>Pflege in Deutschland verst&auml;ndlich erkl&auml;rt</h1>
-                    <p class="section-sub">Unabh&auml;ngige Informationen zu Pflegegraden, Leistungen, Rechten und aktuellen Regelungen nach SGB XI</p>
-                </div>
-                <p class="hero-lead">Dieses Portal richtet sich an pflegebed&uuml;rftige Menschen, pflegende Angeh&ouml;rige und Fachkr&auml;fte. Es fasst die wichtigsten gesetzlichen Grundlagen, Leistungsanspr&uuml;che und Verfahren der deutschen Pflegeversicherung zusammen &ndash; gest&uuml;tzt auf das Sozialgesetzbuch XI, Ver&ouml;ffentlichungen der gesetzlichen Krankenkassen und anerkannter Fachinstitutionen.</p>
-
-                <div class="quick-nav">
-                    <a href="#pflegegrade" class="quick-nav-item">
-                        <div class="quick-nav-num">01</div>
-                        <div class="quick-nav-text"><strong>Pflegegrade</strong><span>Einstufung und Leistungsbetr&auml;ge</span></div>
-                    </a>
-                    <a href="leistungen.html" target="_blank" class="quick-nav-item">
-                        <div class="quick-nav-num">02</div>
-                        <div class="quick-nav-text"><strong>Leistungen &amp; Recht</strong><span>Anspr&uuml;che, Antrag, Widerspruch</span></div>
-                    </a>
-                    <a href="pflegepolitik.html" target="_blank" class="quick-nav-item">
-                        <div class="quick-nav-num">03</div>
-                        <div class="quick-nav-text"><strong>Pflegepolitik</strong><span>Gesetze, Reformen, Entwicklung</span></div>
-                    </a>
-                    <a href="praevention.html" target="_blank" class="quick-nav-item">
-                        <div class="quick-nav-num">04</div>
-                        <div class="quick-nav-text"><strong>Pr&auml;vention</strong><span>Vorbeugen und Gesundheit st&auml;rken</span></div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="pflegegrade" class="pflegegrade-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Pflegegrade im &Uuml;berblick</h2>
-                    <p class="section-sub">Einstufung und monatliche Leistungsbetr&auml;ge gem&auml;&szlig; &sect;&sect; 14, 15, 36, 37 SGB XI (Stand 2026)</p>
-                </div>
-
-                <p class="section-intro">Seit 2017 wird die Pflegebed&uuml;rftigkeit nicht mehr nach Zeitaufwand, sondern anhand der Selbst&auml;ndigkeit einer Person beurteilt. Das <strong>Neue Begutachtungsassessment (NBA)</strong> ermittelt einen Gesamtpunktwert zwischen 0 und 100. Daraus ergibt sich einer von f&uuml;nf Pflegegraden.</p>
-
-                <div class="pg-visual">
-                    <div class="pg-card" data-grade="1">
-                        <div class="pg-bar"><div class="pg-fill" style="--fill: 15%;"></div></div>
-                        <div class="pg-info">
-                            <div class="pg-number">PG 1</div>
-                            <div class="pg-label">Geringe Beeintr&auml;chtigung</div>
-                            <div class="pg-points">12,5 &ndash; 26,9 Punkte</div>
-                        </div>
-                        <div class="pg-leistung">
-                            <div class="pg-amount">125 &euro;</div>
-                            <div class="pg-type">Entlastungsbetrag/Monat</div>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">Ambulanter Pflegedienst in Eilbek</div>
+                        <h1>Ihr Pflegedienst in Hamburg-Eilbek &ndash; pers&ouml;nlich, zuverl&auml;ssig, nah</h1>
+                        <p>Wir unterst&uuml;tzen pflegebed&uuml;rftige Menschen in Eilbek und Umgebung &ndash; professionell, einf&uuml;hlsam und genau dann, wenn Sie uns brauchen. Auch kurzfristige Aufnahmen sind m&ouml;glich.</p>
+                        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                            <a href="#kontakt" class="btn btn-primary">Kostenlose Beratung anfragen</a>
+                            <a href="tel:+4940123456" class="btn btn-secondary btn-phone">040 XXX XXX XX</a>
                         </div>
                     </div>
-
-                    <div class="pg-card" data-grade="2">
-                        <div class="pg-bar"><div class="pg-fill" style="--fill: 35%;"></div></div>
-                        <div class="pg-info">
-                            <div class="pg-number">PG 2</div>
-                            <div class="pg-label">Erhebliche Beeintr&auml;chtigung</div>
-                            <div class="pg-points">27 &ndash; 47,4 Punkte</div>
-                        </div>
-                        <div class="pg-leistung">
-                            <div class="pg-amount">332 &euro;</div>
-                            <div class="pg-type">Pflegegeld/Monat</div>
-                            <div class="pg-sach">761 &euro; Sachleistung</div>
-                        </div>
-                    </div>
-
-                    <div class="pg-card" data-grade="3">
-                        <div class="pg-bar"><div class="pg-fill" style="--fill: 55%;"></div></div>
-                        <div class="pg-info">
-                            <div class="pg-number">PG 3</div>
-                            <div class="pg-label">Schwere Beeintr&auml;chtigung</div>
-                            <div class="pg-points">47,5 &ndash; 69,9 Punkte</div>
-                        </div>
-                        <div class="pg-leistung">
-                            <div class="pg-amount">573 &euro;</div>
-                            <div class="pg-type">Pflegegeld/Monat</div>
-                            <div class="pg-sach">1.432 &euro; Sachleistung</div>
-                        </div>
-                    </div>
-
-                    <div class="pg-card" data-grade="4">
-                        <div class="pg-bar"><div class="pg-fill" style="--fill: 78%;"></div></div>
-                        <div class="pg-info">
-                            <div class="pg-number">PG 4</div>
-                            <div class="pg-label">Schwerste Beeintr&auml;chtigung</div>
-                            <div class="pg-points">70 &ndash; 89,9 Punkte</div>
-                        </div>
-                        <div class="pg-leistung">
-                            <div class="pg-amount">765 &euro;</div>
-                            <div class="pg-type">Pflegegeld/Monat</div>
-                            <div class="pg-sach">1.778 &euro; Sachleistung</div>
-                        </div>
-                    </div>
-
-                    <div class="pg-card" data-grade="5">
-                        <div class="pg-bar"><div class="pg-fill" style="--fill: 100%;"></div></div>
-                        <div class="pg-info">
-                            <div class="pg-number">PG 5</div>
-                            <div class="pg-label">Schwerste Beeintr. mit besonderen Anforderungen</div>
-                            <div class="pg-points">90 &ndash; 100 Punkte</div>
-                        </div>
-                        <div class="pg-leistung">
-                            <div class="pg-amount">947 &euro;</div>
-                            <div class="pg-type">Pflegegeld/Monat</div>
-                            <div class="pg-sach">2.200 &euro; Sachleistung</div>
-                        </div>
-                    </div>
-                </div>
-
-                <h3 class="subheading">Die sechs Module des NBA und ihre Gewichtung</h3>
-                <p class="section-intro">Das Begutachtungsassessment erfasst in sechs Lebensbereichen, wie selbstst&auml;ndig eine Person ihren Alltag bew&auml;ltigen kann. Die Module flie&szlig;en mit unterschiedlichem Gewicht in die Gesamtbewertung ein.</p>
-
-                <div class="pg-module-grid">
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 44V30a12 12 0 0 1 24 0v14" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="38" x2="30" y2="38" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Mobilit&auml;t</h3>
-                        <div class="pg-module-weight">10&nbsp;%</div>
-                        <p>Positionswechsel, Fortbewegen, Treppensteigen</p>
-                    </div>
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="24" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 14h4v6h-4M26 14h4v4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M14 32h20v8H14z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Kognition &amp; Kommunikation</h3>
-                        <div class="pg-module-weight">15&nbsp;%*</div>
-                        <p>Orientierung, Personen erkennen, Entscheidungen treffen</p>
-                    </div>
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M24 42s-14-10-14-20a14 14 0 0 1 28 0c0 10-14 20-14 20z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="22" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Verhalten &amp; Psyche</h3>
-                        <div class="pg-module-weight">15&nbsp;%*</div>
-                        <p>Psychische Problemlagen, n&auml;chtliche Unruhe, &Auml;ngste</p>
-                    </div>
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><rect x="10" y="8" width="28" height="32" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="18" x2="30" y2="18" stroke="currentColor" stroke-width="2"/><line x1="18" y1="24" x2="30" y2="24" stroke="currentColor" stroke-width="2"/><line x1="18" y1="30" x2="26" y2="30" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Selbstversorgung</h3>
-                        <div class="pg-module-weight">40&nbsp;%</div>
-                        <p>K&ouml;rperpflege, Ern&auml;hrung, An- und Auskleiden</p>
-                    </div>
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><path d="M8 24h32" stroke="currentColor" stroke-width="2"/><path d="M24 8v32" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Krankheits&shy;bew&auml;ltigung</h3>
-                        <div class="pg-module-weight">20&nbsp;%</div>
-                        <p>Medikation, Arztbesuche, therapeutische Ma&szlig;nahmen</p>
-                    </div>
-                    <div class="pg-module">
-                        <div class="pg-module-icon">
-                            <svg viewBox="0 0 48 48" width="40" height="40"><circle cx="16" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="20" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 36c0-6 4-10 6-10h4M28 26h4c2 0 6 4 6 10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="20" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="2"/></svg>
-                        </div>
-                        <h3>Alltag &amp; Soziales</h3>
-                        <div class="pg-module-weight">15&nbsp;%</div>
-                        <p>Tagesgestaltung, soziale Kontakte, Ruhephasen</p>
-                    </div>
-                </div>
-                <p class="pg-footnote">* Aus den Modulen 2 (Kognition) und 3 (Verhalten) wird nur der jeweils h&ouml;here Wert in die Gesamtbewertung &uuml;bernommen; zusammen flie&szlig;en sie mit 15&nbsp;% ein. Rechtsgrundlage: &sect; 15 SGB XI in Verbindung mit den Begutachtungsrichtlinien des Medizinischen Dienstes.</p>
-            </div>
-        </section>
-
-        <section id="rechte" class="rechte">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Ihre Rechte auf einen Blick</h2>
-                    <p class="section-sub">Zentrale Anspr&uuml;che aus dem Pflegeversicherungsrecht (SGB XI)</p>
-                </div>
-
-                <div class="rechte-grid">
-                    <div class="recht-card">
-                        <h3>Recht auf Begutachtung</h3>
-                        <p>Die Pflegekasse muss innerhalb von <strong>25 Arbeitstagen</strong> nach Antragseingang &uuml;ber den Pflegegrad entscheiden (&sect; 18 Abs. 3 SGB XI). Bei &Uuml;berschreitung steht Ihnen 70&nbsp;&euro; je angefangener Woche Verz&ouml;gerung zu.</p>
-                    </div>
-                    <div class="recht-card">
-                        <h3>Recht auf Pflegeberatung</h3>
-                        <p>Jede pflegebed&uuml;rftige Person hat Anspruch auf <strong>individuelle und kostenlose Pflegeberatung</strong> nach &sect; 7a SGB XI &ndash; telefonisch, in einem Pflegest&uuml;tzpunkt oder zu Hause.</p>
-                    </div>
-                    <div class="recht-card">
-                        <h3>Recht auf Wunsch- und Wahlrecht</h3>
-                        <p>Pflegebed&uuml;rftige d&uuml;rfen im Rahmen der Leistungen w&auml;hlen, von welchem zugelassenen Pflegedienst oder welcher Einrichtung sie versorgt werden (&sect; 2 Abs. 2 SGB XI).</p>
-                    </div>
-                    <div class="recht-card">
-                        <h3>Recht auf Widerspruch</h3>
-                        <p>Gegen jeden Bescheid kann innerhalb <strong>eines Monats</strong> schriftlich Widerspruch eingelegt werden (&sect; 84 SGG). Das Widerspruchsverfahren ist kostenfrei.</p>
-                    </div>
-                    <div class="recht-card">
-                        <h3>Pflegezeit &amp; Familienpflegezeit</h3>
-                        <p>Arbeitnehmer k&ouml;nnen bis zu <strong>6 Monate Pflegezeit</strong> (PflegeZG) bzw. bis zu <strong>24 Monate Familienpflegezeit</strong> (FPfZG) in Anspruch nehmen. K&uuml;ndigungsschutz besteht ab Ank&uuml;ndigung.</p>
-                    </div>
-                    <div class="recht-card">
-                        <h3>Zuschuss f&uuml;r Wohnumfeld</h3>
-                        <p>Pro wohnumfeldverbessernder Ma&szlig;nahme bis zu <strong>4.180&nbsp;&euro;</strong> Zuschuss (&sect; 40 Abs. 4 SGB XI) &ndash; etwa f&uuml;r Treppenlift, Badumbau oder T&uuml;rverbreiterung.</p>
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 400 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background circle -->
+                            <circle cx="200" cy="160" r="140" fill="#e0f2fe"/>
+                            <circle cx="200" cy="160" r="105" fill="#bae6fd" opacity="0.5"/>
+                            <!-- House -->
+                            <path d="M150 180 L200 140 L250 180 L250 240 L150 240 Z" fill="#ffffff" stroke="#3b82f6" stroke-width="2.5"/>
+                            <path d="M145 183 L200 135 L255 183" fill="none" stroke="#1e40af" stroke-width="3" stroke-linecap="round"/>
+                            <!-- Door -->
+                            <rect x="185" y="210" width="30" height="30" rx="3" fill="#3b82f6"/>
+                            <circle cx="210" cy="226" r="2" fill="#ffffff"/>
+                            <!-- Window -->
+                            <rect x="160" y="192" width="20" height="18" rx="2" fill="#e0f2fe" stroke="#3b82f6" stroke-width="1.5"/>
+                            <line x1="170" y1="192" x2="170" y2="210" stroke="#3b82f6" stroke-width="1"/>
+                            <line x1="160" y1="201" x2="180" y2="201" stroke="#3b82f6" stroke-width="1"/>
+                            <!-- Heart -->
+                            <path d="M200 105 C200 95, 212 88, 218 95 C224 88, 236 95, 236 105 C236 118, 218 130, 218 130 C218 130, 200 118, 200 105 Z" fill="#f97316" opacity="0.85"/>
+                            <!-- Cross -->
+                            <rect x="213" y="99" width="10" height="22" rx="2" fill="#ffffff"/>
+                            <rect x="208" y="105" width="20" height="10" rx="2" fill="#ffffff"/>
+                            <!-- Person left -->
+                            <circle cx="130" cy="195" r="12" fill="#06b6d4" opacity="0.8"/>
+                            <path d="M120 230 C120 215, 130 210, 130 210 C130 210, 140 215, 140 230" stroke="#06b6d4" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <!-- Person right -->
+                            <circle cx="270" cy="195" r="12" fill="#3b82f6" opacity="0.8"/>
+                            <path d="M260 230 C260 215, 270 210, 270 210 C270 210, 280 215, 280 230" stroke="#3b82f6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                            <!-- Decorative dots -->
+                            <circle cx="310" cy="100" r="4" fill="#06b6d4" opacity="0.3"/>
+                            <circle cx="325" cy="120" r="3" fill="#3b82f6" opacity="0.3"/>
+                            <circle cx="90" cy="120" r="3" fill="#f97316" opacity="0.3"/>
+                            <circle cx="80" cy="140" r="4" fill="#06b6d4" opacity="0.3"/>
+                        </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="themen" class="themen">
+        <!-- Leistungen -->
+        <section id="leistungen" class="section-white">
             <div class="container">
-                <h2>Themenbereiche</h2>
-                <p class="themen-intro">Vertiefende Informationsseiten mit rechtlichem Hintergrund, Verfahrensabl&auml;ufen und Leistungs&uuml;bersichten:</p>
-                <div class="themen-grid">
-                    <a href="pflegepolitik.html" target="_blank" class="thema-card">
-                        <h3>Pflegepolitik</h3>
-                        <p>Pflegeversicherungsgesetz, Reformen 1995&ndash;2026, aktuelle gesetzgeberische Entwicklungen</p>
-                    </a>
-                    <a href="leistungen.html" target="_blank" class="thema-card">
+                <div class="section-header">
+                    <h2>Unsere Leistungen</h2>
+                    <p class="section-sub">H&auml;usliche Pflege in Eilbek, die Ihren Alltag entlastet</p>
+                </div>
+                <div class="leistungen-grid">
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="12" r="8" stroke="currentColor" stroke-width="2.5"/><path d="M10 44v-8a14 14 0 0 1 28 0v8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M20 30l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <h3>Grundpflege</h3>
+                        <p>Unterst&uuml;tzung bei K&ouml;rperpflege, An- und Auskleiden, Mobilit&auml;t, Ern&auml;hrung und Lagerung &ndash; individuell auf Ihre Bed&uuml;rfnisse abgestimmt.</p>
+                    </div>
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="14" y="6" width="20" height="36" rx="4" stroke="currentColor" stroke-width="2.5"/><line x1="20" y1="16" x2="28" y2="16" stroke="currentColor" stroke-width="2"/><line x1="20" y1="22" x2="28" y2="22" stroke="currentColor" stroke-width="2"/><line x1="20" y1="28" x2="26" y2="28" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="36" r="2" fill="currentColor"/></svg>
+                        <h3>Behandlungspflege</h3>
+                        <p>Medizinische Leistungen auf &auml;rztliche Verordnung: Medikamentengabe, Wundversorgung, Injektionen, Blutzuckermessung und mehr.</p>
+                    </div>
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M8 38h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M12 38V18l12-8 12 8v20" stroke="currentColor" stroke-width="2.5"/><rect x="20" y="26" width="8" height="12" stroke="currentColor" stroke-width="2"/></svg>
+                        <h3>Hauswirtschaft</h3>
+                        <p>Einkaufen, Kochen, W&auml;schepflege und Wohnungsreinigung &ndash; damit der Haushalt nicht zur zus&auml;tzlichen Belastung wird.</p>
+                    </div>
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5"/><path d="M24 14v10l7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        <h3>Verhinderungspflege</h3>
+                        <p>Sie pflegen selbst und brauchen eine Auszeit? Wir &uuml;bernehmen &ndash; stundenweise oder tageweise. Bis zu 3.539&nbsp;&euro;/Jahr (Gemeinsamer Jahresbetrag).</p>
+                    </div>
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M8 12h32v28H8z" stroke="currentColor" stroke-width="2.5"/><path d="M8 20h32" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="28" r="2" fill="currentColor"/><circle cx="24" cy="28" r="2" fill="currentColor"/><circle cx="32" cy="28" r="2" fill="currentColor"/><circle cx="16" cy="34" r="2" fill="currentColor"/></svg>
+                        <h3>Beratung &amp; Antr&auml;ge</h3>
+                        <p>Wir helfen bei der Beantragung eines Pflegegrads, bei Widerspr&uuml;chen und bei der Auswahl passender Leistungen &ndash; kostenlos und unverbindlich.</p>
+                    </div>
+                    <div class="leistung-card">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 4C14 4 6 12 6 22c0 14 18 22 18 22s18-8 18-22C42 12 34 4 24 4z" stroke="currentColor" stroke-width="2.5"/><path d="M18 22h12M24 16v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        <h3>Pflegeberatung &sect; 37.3</h3>
+                        <p>Regelm&auml;&szlig;ige Beratungsbesuche f&uuml;r Pflegegeld-Empf&auml;nger &ndash; gesetzlich vorgeschrieben und bei uns selbstverst&auml;ndlich inklusive.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="section-blue">
+            <div class="container" style="text-align:center;">
+                <h2 style="font-size:1.4rem;font-weight:800;color:var(--primary);margin-bottom:0.5rem;">Kurzfristige Aufnahme m&ouml;glich</h2>
+                <p style="color:var(--text-light);margin-bottom:1.25rem;max-width:550px;margin-left:auto;margin-right:auto;">Pflege wird oft pl&ouml;tzlich n&ouml;tig. Wir reagieren schnell &ndash; in vielen F&auml;llen k&ouml;nnen wir innerhalb weniger Tage starten.</p>
+                <a href="#kontakt" class="btn btn-primary">Jetzt Verf&uuml;gbarkeit anfragen</a>
+            </div>
+        </section>
+
+        <!-- Warum wir -->
+        <section id="warum" class="section-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Warum Familien in Eilbek uns vertrauen</h2>
+                    <p class="section-sub">Pers&ouml;nlich, professionell und immer erreichbar</p>
+                </div>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" fill="none"><circle cx="20" cy="16" r="8" stroke="#06b6d4" stroke-width="2.5"/><circle cx="32" cy="18" r="6" stroke="#06b6d4" stroke-width="2"/><path d="M6 40c0-8 6-14 14-14s14 6 14 14" stroke="#06b6d4" stroke-width="2.5"/></svg>
+                        </div>
+                        <h3>Pers&ouml;nliche Bezugspflege</h3>
+                        <p>Kein st&auml;ndiger Wechsel: Ein festes Pflegeteam kommt zu Ihnen. So entsteht Vertrauen.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" fill="none"><circle cx="24" cy="24" r="18" stroke="#06b6d4" stroke-width="2.5"/><path d="M24 12v12l8 8" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Schnelle Hilfe</h3>
+                        <p>Kurzfristige Aufnahmen bei vorhandener Kapazit&auml;t innerhalb weniger Tage m&ouml;glich.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" fill="none"><path d="M12 38V22l12-10 12 10v16" stroke="#06b6d4" stroke-width="2.5"/><path d="M20 38v-10h8v10" stroke="#06b6d4" stroke-width="2"/><path d="M8 24l16-14 16 14" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round"/></svg>
+                        </div>
+                        <h3>Erfahrung &amp; Qualifikation</h3>
+                        <p>Examinierte Pflegefachkr&auml;fte, regelm&auml;&szlig;ig fortgebildet und mit Freude an der Arbeit mit Menschen.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="icon">
+                            <svg viewBox="0 0 48 48" width="44" height="44" fill="none"><rect x="8" y="12" width="32" height="24" rx="3" stroke="#06b6d4" stroke-width="2.5"/><path d="M16 24h16M16 30h10" stroke="#06b6d4" stroke-width="2" stroke-linecap="round"/><circle cx="36" cy="18" r="2" fill="#06b6d4"/></svg>
+                        </div>
+                        <h3>Transparenz &amp; Fairness</h3>
+                        <p>Klarer Kostenvoranschlag, direkte Abrechnung mit der Pflegekasse, keine versteckten Posten.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lokaler Bezug -->
+        <section class="section-blue">
+            <div class="container">
+                <div class="local-content">
+                    <div class="local-text">
+                        <h2>In Eilbek zu Hause &ndash; Ihr Pflegedienst vor Ort</h2>
+                        <p>Wir sind kein &uuml;berregionaler Gro&szlig;anbieter, sondern ein Pflegedienst mit Wurzeln in Hamburg-Eilbek. Unsere Pflegekr&auml;fte kennen den Stadtteil &ndash; die Wege sind kurz, die Betreuung ist nah.</p>
+                        <p>Das bedeutet: schnellere Eins&auml;tze, flexiblere Zeiten und mehr Zeit f&uuml;r das, was z&auml;hlt &ndash; Ihre Versorgung.</p>
+                        <div class="local-areas">
+                            <span>Eilbek</span>
+                            <span>Wandsbek</span>
+                            <span>Barmbek-S&uuml;d</span>
+                            <span>Hohenfelde</span>
+                            <span>Marienthal</span>
+                            <span>Hamm</span>
+                        </div>
+                    </div>
+                    <div class="hero-illustration">
+                        <svg viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Map-like illustration -->
+                            <rect x="30" y="30" width="240" height="180" rx="16" fill="#ffffff" stroke="#bae6fd" stroke-width="2"/>
+                            <!-- Streets -->
+                            <path d="M50 120 H250" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M150 50 V210" stroke="#e0f2fe" stroke-width="8" stroke-linecap="round"/>
+                            <path d="M80 80 L220 170" stroke="#e0f2fe" stroke-width="5" stroke-linecap="round"/>
+                            <!-- Location pin -->
+                            <path d="M150 85 C150 70, 165 62, 172 70 C179 62, 194 70, 194 85 C194 102, 172 115, 172 115 C172 115, 150 102, 150 85 Z" fill="#3b82f6"/>
+                            <circle cx="172" cy="87" r="8" fill="#ffffff"/>
+                            <circle cx="172" cy="87" r="4" fill="#3b82f6"/>
+                            <!-- Small buildings -->
+                            <rect x="60" y="135" width="25" height="30" rx="3" fill="#bae6fd"/>
+                            <rect x="95" y="140" width="20" height="25" rx="3" fill="#93c5fd"/>
+                            <rect x="200" y="130" width="30" height="35" rx="3" fill="#bae6fd"/>
+                            <!-- Label -->
+                            <text x="150" y="225" text-anchor="middle" fill="#3b82f6" font-size="12" font-weight="700" font-family="Inter, sans-serif">Hamburg-Eilbek</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ablauf -->
+        <section id="ablauf" class="section-white">
+            <div class="container">
+                <div class="section-header">
+                    <h2>So einfach geht&rsquo;s &ndash; in drei Schritten</h2>
+                    <p class="section-sub">Von der Anfrage bis zur t&auml;glichen Pflege</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Anruf oder Nachricht</h3>
+                        <p>Schildern Sie uns Ihre Situation &ndash; ganz unverbindlich. Wir h&ouml;ren zu und stellen die richtigen Fragen.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Erstgespr&auml;ch bei Ihnen</h3>
+                        <p>Wir kommen vorbei, lernen Sie kennen und erstellen gemeinsam einen individuellen Pflegeplan.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Pflege beginnt</h3>
+                        <p>Ihr festes Pflegeteam startet mit der Versorgung. Sie haben jederzeit einen Ansprechpartner.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>H&auml;ufige Fragen</h2>
+                    <p class="section-sub">Antworten f&uuml;r Angeh&ouml;rige und Pflegebed&uuml;rftige</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>&Uuml;bernimmt die Pflegekasse die Kosten?</h3>
+                        <p>Ja. Ambulante Pflegeleistungen werden ab Pflegegrad 1 bezuschusst. Bei Pflegegrad 2 stehen Ihnen Sachleistungen von bis zu <strong>796&nbsp;&euro;</strong> monatlich zu, bei Pflegegrad 3 bis zu <strong>1.497&nbsp;&euro;</strong>, bei Pflegegrad 4 bis zu <strong>1.859&nbsp;&euro;</strong> und bei Pflegegrad 5 bis zu <strong>2.299&nbsp;&euro;</strong>. Wir rechnen direkt mit Ihrer Kasse ab.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Wie schnell k&ouml;nnen Sie anfangen?</h3>
+                        <p>In vielen F&auml;llen innerhalb weniger Tage. Rufen Sie uns an &ndash; wir sagen Ihnen ehrlich, ob wir aktuell Kapazit&auml;ten haben.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Mein Angeh&ouml;riger hat noch keinen Pflegegrad &ndash; k&ouml;nnen Sie trotzdem helfen?</h3>
+                        <p>Ja. Wir unterst&uuml;tzen Sie bei der Beantragung und beraten zu Ihren Anspr&uuml;chen. Bestimmte &auml;rztlich verordnete Leistungen (Behandlungspflege) werden auch ohne Pflegegrad von der Krankenkasse &uuml;bernommen.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Was kostet Pflege, wenn ich Pflegegeld beziehe?</h3>
+                        <p>Bei Pflegegrad 2 erhalten Sie <strong>347&nbsp;&euro;</strong> Pflegegeld monatlich, bei Pflegegrad 3 sind es <strong>599&nbsp;&euro;</strong>, bei Pflegegrad 4 <strong>800&nbsp;&euro;</strong> und bei Pflegegrad 5 <strong>990&nbsp;&euro;</strong>. Alternativ oder erg&auml;nzend k&ouml;nnen Sie Sachleistungen nutzen &ndash; wir beraten Sie zu Kombinationsm&ouml;glichkeiten.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Kann ich als Angeh&ouml;riger mitentscheiden?</h3>
+                        <p>Selbstverst&auml;ndlich. Der Pflegeplan wird gemeinsam mit Ihnen und Ihrem Angeh&ouml;rigen erstellt und regelm&auml;&szlig;ig angepasst.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section id="kontakt" class="section-white">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Wir sind f&uuml;r Sie da</h2>
+                    <p>Rufen Sie uns an oder schreiben Sie uns &ndash; wir melden uns innerhalb von 24 Stunden.</p>
+                    <a href="tel:+4940123456" class="contact-phone">040 XXX XXX XX</a>
+                    <a href="#kontakt" class="btn btn-primary" style="background:#fff;color:var(--primary);">Kontaktformular &ouml;ffnen</a>
+                    <div class="contact-details">
+                        <p>Mo&ndash;Fr 8:00&ndash;17:00 Uhr &bull; Medicare Team Eilbek &bull; Hamburg-Eilbek</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Info-Ressourcen -->
+        <section class="section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Informationen f&uuml;r Angeh&ouml;rige</h2>
+                    <p class="section-sub">Vertiefende Ratgeber zu Leistungen, Rechten und Pr&auml;vention</p>
+                </div>
+                <div class="leistungen-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+                    <a href="leistungen.html" class="leistung-card" style="text-decoration:none;color:inherit;">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="10" y="6" width="28" height="36" rx="3" stroke="currentColor" stroke-width="2.5"/><line x1="18" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="2"/><line x1="18" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="2"/><line x1="18" y1="28" x2="26" y2="28" stroke="currentColor" stroke-width="2"/></svg>
                         <h3>Leistungen &amp; Recht</h3>
-                        <p>Pflegegeld, Sachleistungen, Verhinderungs- und Kurzzeitpflege, Widerspruchsverfahren</p>
+                        <p>Pflegegeld, Sachleistungen, Gemeinsamer Jahresbetrag, Widerspruch</p>
                     </a>
-                    <a href="praevention.html" target="_blank" class="thema-card">
+                    <a href="pflegepolitik.html" class="leistung-card" style="text-decoration:none;color:inherit;">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M8 40h32M12 40V20l12-10 12 10v20" stroke="currentColor" stroke-width="2.5"/><rect x="20" y="28" width="8" height="12" stroke="currentColor" stroke-width="2"/></svg>
+                        <h3>Pflegepolitik</h3>
+                        <p>Reformen 2024&ndash;2026, PKG, Finanzierung</p>
+                    </a>
+                    <a href="praevention.html" class="leistung-card" style="text-decoration:none;color:inherit;">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><path d="M24 4C14 4 6 12 6 22c0 14 18 22 18 22s18-8 18-22C42 12 34 4 24 4z" stroke="currentColor" stroke-width="2.5"/><path d="M18 22h12M24 16v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
                         <h3>Pr&auml;vention</h3>
-                        <p>Sturzpr&auml;vention, Demenzvorbeugung, Gesundheitsf&ouml;rderung f&uuml;r Angeh&ouml;rige</p>
+                        <p>Sturzpr&auml;vention, Demenzvorbeugung, Tipps</p>
                     </a>
-                    <a href="digitalisierung.html" target="_blank" class="thema-card">
+                    <a href="digitalisierung.html" class="leistung-card" style="text-decoration:none;color:inherit;">
+                        <svg class="icon" viewBox="0 0 48 48" fill="none"><rect x="10" y="8" width="28" height="32" rx="4" stroke="currentColor" stroke-width="2.5"/><circle cx="24" cy="36" r="2" fill="currentColor"/><line x1="18" y1="14" x2="30" y2="14" stroke="currentColor" stroke-width="2"/></svg>
                         <h3>Digitalisierung</h3>
-                        <p>Elektronische Patientenakte (ePA), DiGA, Telemedizin, digitale Pflegedokumentation</p>
+                        <p>ePA, DiGA, Telemedizin</p>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="quellen" class="quellen">
-            <div class="container">
-                <h2>Rechtsgrundlagen und redaktionelle Quellen</h2>
-                <p class="quellen-info">Die Inhalte dieses Portals st&uuml;tzen sich auf die nachstehenden Rechtsgrundlagen sowie ver&ouml;ffentlichte Informationen offizieller Stellen und gesetzlicher Krankenkassen:</p>
-
-                <h3 class="subheading-small">Gesetzliche Grundlagen</h3>
-                <ul class="law-list">
-                    <li><strong>SGB XI</strong> &ndash; Soziale Pflegeversicherung (insb. &sect;&sect; 14, 15, 18, 36, 37, 39, 40, 42, 45a, 45b)</li>
-                    <li><strong>SGB V</strong> &ndash; Gesetzliche Krankenversicherung (Schnittstellen zur h&auml;uslichen Krankenpflege)</li>
-                    <li><strong>PflegeZG</strong> &ndash; Pflegezeitgesetz &middot; <strong>FPfZG</strong> &ndash; Familienpflegezeitgesetz</li>
-                    <li><strong>Begutachtungs-Richtlinien</strong> des Medizinischen Dienstes Bund</li>
-                </ul>
-
-                <h3 class="subheading-small">Institutionelle Quellen</h3>
-                <div class="quellen-grid">
-                    <div class="quelle">BARMER</div>
-                    <div class="quelle">Techniker Krankenkasse</div>
-                    <div class="quelle">AOK Bundesverband</div>
-                    <div class="quelle">DAK Gesundheit</div>
-                    <div class="quelle">Knappschaft</div>
-                    <div class="quelle">Medizinischer Dienst Bund</div>
-                    <div class="quelle">Bundesgesundheits&shy;ministerium</div>
-                    <div class="quelle">Statistisches Bundesamt</div>
-                </div>
-
-                <div class="disclaimer">
-                    <strong>Wichtiger Hinweis</strong>
-                    <p>Dieses Portal bietet eine allgemein verst&auml;ndliche &Uuml;bersicht zum deutschen Pflegesystem und ersetzt <strong>keine individuelle Rechts-, Sozial- oder Pflegeberatung</strong>. Verbindliche Ausk&uuml;nfte erhalten Sie bei Ihrer Pflegekasse, anerkannten Pflegest&uuml;tzpunkten (Verzeichnis unter <em>zqp.de</em>) oder zugelassenen Pflegeberaterinnen und -beratern nach &sect; 7a SGB XI. S&auml;mtliche Angaben wurden sorgf&auml;ltig recherchiert; ma&szlig;geblich sind jedoch stets die zum Zeitpunkt der Leistungsgew&auml;hrung geltenden gesetzlichen Regelungen und Bescheide der zust&auml;ndigen Stellen.</p>
-                    <p class="disclaimer-stand">Stand der Informationen: April 2026 &middot; N&auml;chste redaktionelle Pr&uuml;fung: laufend</p>
                 </div>
             </div>
         </section>
@@ -294,10 +316,11 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <div class="footer-logo">Pflege<span>Info</span></div>
-                <p>Unabh&auml;ngiges Informationsportal zur Pflege in Deutschland</p>
+                <div class="footer-logo">Medicare <span>Team Eilbek</span></div>
+                <p>Ihr ambulanter Pflegedienst in Hamburg-Eilbek</p>
             </div>
             <div class="footer-right">
+                <a href="leistungen.html">Leistungen</a>
                 <a href="#">Impressum</a>
                 <a href="#">Datenschutz</a>
             </div>
