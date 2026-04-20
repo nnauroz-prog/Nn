@@ -25,8 +25,8 @@
         <section class="hero" style="padding-bottom:2.5rem;">
             <div class="container" style="text-align:center;">
                 <div class="hero-badge">Kostenlose &amp; unverbindliche Beratung</div>
-                <h1 style="font-size:1.8rem;max-width:600px;margin:0 auto 0.75rem;">Kontaktieren Sie Medicare Team Eilbek</h1>
-                <p style="color:var(--text-light);max-width:500px;margin:0 auto;">F&uuml;llen Sie das Formular aus &ndash; wir melden uns schnellstm&ouml;glich bei Ihnen. Oder rufen Sie direkt an &ndash; wir sind rund um die Uhr erreichbar:</p>
+                <h1 style="font-size:1.8rem;max-width:600px;margin:0 auto 0.75rem;">Schreiben Sie mir &ndash; ich melde mich bei Ihnen</h1>
+                <p style="color:var(--text-light);max-width:500px;margin:0 auto;">F&uuml;llen Sie das kurze Formular aus &ndash; ich melde mich schnellstm&ouml;glich bei Ihnen. Oder rufen Sie mich direkt an &ndash; rund um die Uhr erreichbar:</p>
                 <a href="tel:+491607621876" class="btn btn-secondary btn-phone" style="margin-top:1rem;font-size:1.2rem;">0160 762 18 76</a>
             </div>
         </section>
@@ -36,18 +36,7 @@
                 <div class="form-wrapper">
                     <form action="#" method="POST" class="contact-form" onsubmit="return handleSubmit(event);">
 
-                        <div class="form-section-title">Ihre Kontaktdaten</div>
-
                         <div class="form-row">
-                            <div class="form-group">
-                                <label for="anrede">Anrede</label>
-                                <select id="anrede" name="anrede" required>
-                                    <option value="">Bitte w&auml;hlen</option>
-                                    <option value="Herr">Herr</option>
-                                    <option value="Frau">Frau</option>
-                                    <option value="Divers">Divers</option>
-                                </select>
-                            </div>
                             <div class="form-group">
                                 <label for="vorname">Vorname *</label>
                                 <input type="text" id="vorname" name="vorname" required placeholder="Max">
@@ -69,27 +58,6 @@
                             </div>
                         </div>
 
-                        <div class="form-section-title">Adresse</div>
-
-                        <div class="form-row">
-                            <div class="form-group form-group-wide">
-                                <label for="strasse">Stra&szlig;e &amp; Hausnummer *</label>
-                                <input type="text" id="strasse" name="strasse" required placeholder="Eilbeker Weg 12">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="plz">PLZ *</label>
-                                <input type="text" id="plz" name="plz" required placeholder="22089" maxlength="5" pattern="[0-9]{5}">
-                            </div>
-                            <div class="form-group">
-                                <label for="ort">Ort *</label>
-                                <input type="text" id="ort" name="ort" required placeholder="Hamburg" value="Hamburg">
-                            </div>
-                        </div>
-
-                        <div class="form-section-title">Angaben zur Pflegesituation</div>
-
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="versicherung">Versicherungsstatus *</label>
@@ -103,13 +71,6 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="krankenkasse">Krankenkasse / Versicherung</label>
-                                <input type="text" id="krankenkasse" name="krankenkasse" placeholder="z.B. TK, AOK, BARMER">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
                                 <label for="pflegegrad">Pflegegrad</label>
                                 <select id="pflegegrad" name="pflegegrad">
                                     <option value="">Bitte w&auml;hlen</option>
@@ -122,47 +83,12 @@
                                     <option value="5">Pflegegrad 5</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="pflege-fuer">Pflege f&uuml;r</label>
-                                <select id="pflege-fuer" name="pflege-fuer">
-                                    <option value="">Bitte w&auml;hlen</option>
-                                    <option value="mich">Mich selbst</option>
-                                    <option value="elternteil">Mein Elternteil</option>
-                                    <option value="partner">Meinen Partner / meine Partnerin</option>
-                                    <option value="angehoerig">Anderen Angeh&ouml;rigen</option>
-                                </select>
-                            </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group form-group-wide">
-                                <label for="leistungen">Gew&uuml;nschte Leistungen</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="grundpflege"> Grundpflege</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="behandlungspflege"> Behandlungspflege</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="hauswirtschaft"> Hauswirtschaft</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="verhinderungspflege"> Verhinderungspflege</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="beratung"> Beratung / Pflegegrad-Antrag</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="leistungen" value="sonstiges"> Sonstiges</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group form-group-wide">
-                                <label for="nachricht">Ihre Nachricht / besondere W&uuml;nsche</label>
-                                <textarea id="nachricht" name="nachricht" rows="4" placeholder="Beschreiben Sie kurz Ihre Situation oder stellen Sie uns Fragen..."></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group form-group-wide">
-                                <label for="kontakt-wunsch">Wie m&ouml;chten Sie kontaktiert werden?</label>
-                                <div class="checkbox-group">
-                                    <label class="checkbox-label"><input type="radio" name="kontakt-wunsch" value="telefon" checked> Telefonisch</label>
-                                    <label class="checkbox-label"><input type="radio" name="kontakt-wunsch" value="email"> Per E-Mail</label>
-                                    <label class="checkbox-label"><input type="radio" name="kontakt-wunsch" value="egal"> Beides ist mir recht</label>
-                                </div>
+                                <label for="nachricht">Ihre Nachricht</label>
+                                <textarea id="nachricht" name="nachricht" rows="3" placeholder="Beschreiben Sie kurz Ihre Situation oder stellen Sie mir Fragen..."></textarea>
                             </div>
                         </div>
 
@@ -170,7 +96,7 @@
                             <div class="form-group form-group-wide">
                                 <label class="checkbox-label" style="font-size:0.82rem;color:var(--text-light);">
                                     <input type="checkbox" name="datenschutz" required>
-                                    Ich stimme der Verarbeitung meiner Daten gem&auml;&szlig; der <a href="#" style="color:var(--primary);">Datenschutzerkl&auml;rung</a> zu. *
+                                    Ich stimme der Verarbeitung meiner Daten gem&auml;&szlig; der <a href="datenschutz.html" style="color:var(--primary);">Datenschutzerkl&auml;rung</a> zu. *
                                 </label>
                             </div>
                         </div>
@@ -185,7 +111,7 @@
                     <div id="success-message" class="success-message" style="display:none;">
                         <svg viewBox="0 0 48 48" width="56" height="56" fill="none"><circle cx="24" cy="24" r="22" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/><path d="M14 24l7 7 13-13" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         <h2>Vielen Dank f&uuml;r Ihre Anfrage!</h2>
-                        <p>Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                        <p>Ich habe Ihre Nachricht erhalten und melde mich schnellstm&ouml;glich bei Ihnen.</p>
                         <p><strong>Medicare Team Eilbek</strong> &bull; Hamburgs Gesundheits- und Seniorenpflege</p>
                         <a href="index.html" class="btn btn-secondary" style="margin-top:1rem;">Zur&uuml;ck zur Startseite</a>
                     </div>
@@ -200,7 +126,7 @@
                 <div class="footer-logo">Medicare <span>Team Eilbek</span></div>
                 <p>Hamburgs Gesundheits- und Seniorenpflege</p>
             </div>
-            <div class="footer-right"><a href="index.html">Startseite</a><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+            <div class="footer-right"><a href="index.html">Startseite</a><a href="#">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
         </div>
     </footer>
 
