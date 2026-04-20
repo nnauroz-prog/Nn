@@ -233,6 +233,22 @@ nav {
     font-size: 0.82rem; font-weight: 600;
 }
 
+/* === About / Foto Section === */
+.about-content {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+}
+.about-photo img {
+    width: 100%; border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    object-fit: cover; max-height: 400px;
+}
+.about-text h2 {
+    font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;
+}
+.about-text p {
+    font-size: 0.95rem; color: var(--text-light); line-height: 1.75; margin-bottom: 0.75rem;
+}
+
 /* === Footer === */
 footer {
     background: var(--primary); color: rgba(255,255,255,0.7);
@@ -536,6 +552,8 @@ a.thema-card { display: block; text-decoration: none; color: inherit; }
     .leistungen-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: 1fr; }
 
+    .about-content { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-photo img { max-height: 300px; }
     .footer-content { flex-direction: column; gap: 0.75rem; text-align: center; }
     .section-header h2 { font-size: 1.4rem; }
     .contact-box { padding: 2rem 1.5rem; }
