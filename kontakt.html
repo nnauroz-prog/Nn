@@ -34,53 +34,56 @@
         <section id="formular" class="section-white">
             <div class="container">
                 <div class="form-wrapper">
-                    <form action="#" method="POST" class="contact-form" onsubmit="return handleSubmit(event);">
+                    <form action="https://formspree.io/f/xpwrgjqk" method="POST" class="contact-form" id="contact-form">
+                        <input type="hidden" name="_subject" value="Neue Anfrage &uuml;ber Medicare Team Eilbek">
+                        <input type="hidden" name="_next" value="https://nnauroz-prog.github.io/Nn/danke.html">
+                        <input type="text" name="_gotcha" style="display:none">
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="vorname">Vorname *</label>
-                                <input type="text" id="vorname" name="vorname" required placeholder="Max">
+                                <input type="text" id="vorname" name="Vorname" required placeholder="Max">
                             </div>
                             <div class="form-group">
                                 <label for="nachname">Nachname *</label>
-                                <input type="text" id="nachname" name="nachname" required placeholder="Mustermann">
+                                <input type="text" id="nachname" name="Nachname" required placeholder="Mustermann">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="telefon">Telefon *</label>
-                                <input type="tel" id="telefon" name="telefon" required placeholder="040 123 456 78">
+                                <input type="tel" id="telefon" name="Telefon" required placeholder="040 123 456 78">
                             </div>
                             <div class="form-group">
                                 <label for="email">E-Mail</label>
-                                <input type="email" id="email" name="email" placeholder="max@beispiel.de">
+                                <input type="email" id="email" name="_replyto" placeholder="max@beispiel.de">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="versicherung">Versicherungsstatus *</label>
-                                <select id="versicherung" name="versicherung" required>
+                                <select id="versicherung" name="Versicherungsstatus" required>
                                     <option value="">Bitte w&auml;hlen</option>
-                                    <option value="gesetzlich">Gesetzlich versichert (GKV)</option>
-                                    <option value="privat">Privat versichert (PKV)</option>
-                                    <option value="beihilfe">Beihilfe + PKV</option>
-                                    <option value="selbstzahler">Selbstzahler</option>
-                                    <option value="unsicher">Bin mir unsicher</option>
+                                    <option value="Gesetzlich versichert (GKV)">Gesetzlich versichert (GKV)</option>
+                                    <option value="Privat versichert (PKV)">Privat versichert (PKV)</option>
+                                    <option value="Beihilfe + PKV">Beihilfe + PKV</option>
+                                    <option value="Selbstzahler">Selbstzahler</option>
+                                    <option value="Bin mir unsicher">Bin mir unsicher</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="pflegegrad">Pflegegrad</label>
-                                <select id="pflegegrad" name="pflegegrad">
+                                <select id="pflegegrad" name="Pflegegrad">
                                     <option value="">Bitte w&auml;hlen</option>
-                                    <option value="keiner">Kein Pflegegrad / noch nicht beantragt</option>
-                                    <option value="beantragt">Beantragt, noch kein Bescheid</option>
-                                    <option value="1">Pflegegrad 1</option>
-                                    <option value="2">Pflegegrad 2</option>
-                                    <option value="3">Pflegegrad 3</option>
-                                    <option value="4">Pflegegrad 4</option>
-                                    <option value="5">Pflegegrad 5</option>
+                                    <option value="Kein Pflegegrad">Kein Pflegegrad / noch nicht beantragt</option>
+                                    <option value="Beantragt">Beantragt, noch kein Bescheid</option>
+                                    <option value="Pflegegrad 1">Pflegegrad 1</option>
+                                    <option value="Pflegegrad 2">Pflegegrad 2</option>
+                                    <option value="Pflegegrad 3">Pflegegrad 3</option>
+                                    <option value="Pflegegrad 4">Pflegegrad 4</option>
+                                    <option value="Pflegegrad 5">Pflegegrad 5</option>
                                 </select>
                             </div>
                         </div>
@@ -88,7 +91,7 @@
                         <div class="form-row">
                             <div class="form-group form-group-wide">
                                 <label for="nachricht">Ihre Nachricht</label>
-                                <textarea id="nachricht" name="nachricht" rows="3" placeholder="Beschreiben Sie kurz Ihre Situation oder stellen Sie mir Fragen..."></textarea>
+                                <textarea id="nachricht" name="Nachricht" rows="3" placeholder="Beschreiben Sie kurz Ihre Situation oder stellen Sie mir Fragen..."></textarea>
                             </div>
                         </div>
 
