@@ -97,6 +97,20 @@
         });
     }
 
+    // FAQ Accordion
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+        var question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', function () {
+                faqItems.forEach(function (other) {
+                    if (other !== item) other.classList.remove('open');
+                });
+                item.classList.toggle('open');
+            });
+        }
+    });
+
     // Active Nav Highlighting
     var navLinks = document.querySelectorAll('.nav-links a');
     var sections = document.querySelectorAll('section[id]');
