@@ -198,27 +198,42 @@ nav {
 .faq-list { max-width: 700px; margin: 0 auto; }
 .faq-item {
     background: var(--bg-card); border-radius: var(--radius);
-    padding: 1rem 1.5rem; margin-bottom: 0.6rem;
-    box-shadow: var(--shadow); border: 1px solid var(--border-light);
-    cursor: pointer; transition: box-shadow 0.2s;
+    padding: 1.1rem 1.5rem; margin-bottom: 0.6rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-light);
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.3s, background 0.3s;
 }
 .faq-item:hover { box-shadow: var(--shadow-hover); }
+.faq-item.open {
+    border-left-color: var(--accent);
+    background: var(--bg);
+}
 .faq-question {
     display: flex; align-items: center; justify-content: space-between; gap: 1rem;
 }
-.faq-item h3 { font-size: 0.95rem; font-weight: 700; color: var(--primary); margin: 0; }
-.faq-chevron {
-    width: 20px; height: 20px; flex-shrink: 0;
-    color: var(--primary-light); transition: transform 0.3s ease;
+.faq-item h3 {
+    font-size: 0.95rem; font-weight: 700; color: var(--primary); margin: 0;
+    transition: color 0.2s;
 }
-.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-item.open h3 { color: var(--accent); }
+.faq-chevron {
+    width: 22px; height: 22px; flex-shrink: 0; padding: 2px;
+    color: var(--text-muted); transition: transform 0.3s ease, color 0.3s;
+}
+.faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--accent); }
 .faq-answer {
     max-height: 0; overflow: hidden;
-    transition: max-height 0.35s ease, padding-top 0.35s ease;
+    transition: max-height 0.4s ease, padding-top 0.3s ease;
     padding-top: 0;
 }
-.faq-item.open .faq-answer { max-height: 200px; padding-top: 0.6rem; }
-.faq-item p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; margin: 0; }
+.faq-item.open .faq-answer { max-height: 250px; padding-top: 0.75rem; }
+.faq-answer p {
+    font-size: 0.88rem; color: var(--text-light); line-height: 1.7; margin: 0;
+    padding-left: 0.25rem;
+    border-left: none;
+}
 
 /* === Contact === */
 .contact-box {
