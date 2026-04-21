@@ -6,6 +6,7 @@
     <title>Kontakt &ndash; Medicare Team Eilbek | Kostenlose Beratung anfragen</title>
     <meta name="description" content="Kontaktieren Sie Medicare Team Eilbek &ndash; Ihr ambulanter Pflegedienst in Hamburg-Eilbek. Kostenlose Beratung, schnelle R&uuml;ckmeldung.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
     <header>
@@ -110,14 +111,6 @@
 
                         <p style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:0.75rem;">* Pflichtfelder &bull; Rund um die Uhr erreichbar</p>
                     </form>
-
-                    <div id="success-message" class="success-message" style="display:none;">
-                        <svg viewBox="0 0 48 48" width="56" height="56" fill="none"><circle cx="24" cy="24" r="22" fill="#e0f2fe" stroke="#3b82f6" stroke-width="2"/><path d="M14 24l7 7 13-13" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <h2>Vielen Dank f&uuml;r Ihre Anfrage!</h2>
-                        <p>Ich habe Ihre Nachricht erhalten und melde mich schnellstm&ouml;glich bei Ihnen.</p>
-                        <p><strong>Medicare Team Eilbek</strong> &bull; Hamburgs Gesundheits- und Seniorenpflege</p>
-                        <a href="index.html" class="btn btn-secondary" style="margin-top:1rem;">Zur&uuml;ck zur Startseite</a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -133,17 +126,10 @@
         </div>
     </footer>
 
-    <script>
-    var m=document.querySelector('.menu-toggle'),n=document.querySelector('.nav-links');
-    if(m&&n){m.addEventListener('click',function(){n.classList.toggle('active');});}
-
-    function handleSubmit(e){
-        e.preventDefault();
-        document.querySelector('.contact-form').style.display='none';
-        document.getElementById('success-message').style.display='block';
-        window.scrollTo({top:0,behavior:'smooth'});
-        return false;
-    }
-    </script>
+    <a href="https://wa.me/491607621876?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20Ihre%20Pflegeleistungen." class="whatsapp-float" aria-label="WhatsApp Chat" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-1-.3-.1-.5-.15-.7.15s-.8 1-.95 1.2c-.2.2-.35.2-.65.05-1.8-.9-3-1.6-4.2-3.6-.3-.55.3-.5.9-1.7.1-.2.05-.35-.025-.5s-.7-1.7-.95-2.3c-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.5.075-.8.375S5.5 7.5 5.5 9.1s1.2 3.2 1.4 3.4c.15.2 2.4 3.65 5.8 5.1 2.15.95 3 1.025 4.1.85.65-.1 2-.8 2.3-1.6.3-.8.3-1.45.2-1.6-.1-.1-.3-.2-.6-.35zM12 21.8A9.8 9.8 0 012.2 12 9.8 9.8 0 0112 2.2 9.8 9.8 0 0121.8 12 9.8 9.8 0 0112 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.55 4.1 1.6 5.9L0 24l6.3-1.6C8 23.4 10 24 12 24c6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></a>
+    <button class="back-to-top" aria-label="Nach oben scrollen"><svg viewBox="0 0 20 20" fill="none"><path d="M10 16V4M4 10l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mobile-call-bar"><a href="tel:+491607621876"><svg viewBox="0 0 20 20"><path d="M2 3c0-1 1-2 2-2h1.5c.5 0 1 .3 1.1.8l1 3c.1.4 0 .9-.3 1.1L5.5 7.5c1 2.5 3 4.5 5.5 5.5l1.6-1.8c.3-.3.7-.4 1.1-.3l3 1c.5.2.8.6.8 1.1V16c0 1-1 2-2 2C8 18 2 12 2 3z" fill="currentColor"/></svg> Jetzt anrufen: 0160 762 18 76</a></div>
+    <div class="cookie-banner"><p>Diese Website verwendet keine Tracking-Cookies. Durch die Nutzung stimmen Sie der <a href="datenschutz.html">Datenschutzerkl&auml;rung</a> zu.</p><button class="cookie-accept">Verstanden</button></div>
+    <script src="script.js"></script>
 </body>
 </html>
