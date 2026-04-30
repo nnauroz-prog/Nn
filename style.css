@@ -574,9 +574,9 @@ a.thema-card { display: block; text-decoration: none; color: inherit; }
     .menu-toggle { display: flex; }
 
     .hero { padding: 5.5rem 0 2.5rem; }
-    .hero-content { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-text h1 { font-size: 1.6rem; }
-    .hero-photo img { width: 220px; height: 280px; }
+    .hero-content { grid-template-columns: 1fr; gap: 1.5rem; }
+    .hero-text h1 { font-size: 1.5rem; }
+    .hero-photo img { width: 260px; height: 320px; }
 
     .steps { grid-template-columns: 1fr; gap: 1.5rem; }
     .local-content { grid-template-columns: 1fr; gap: 1.5rem; }
