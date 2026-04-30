@@ -98,8 +98,13 @@ nav {
     border-radius: 20px; margin-bottom: 1rem;
     text-transform: uppercase; letter-spacing: 0.04em;
 }
-.hero-illustration { display: flex; justify-content: center; align-items: center; }
-.hero-illustration svg { width: 100%; max-width: 320px; height: auto; }
+.hero-photo { display: flex; justify-content: center; align-items: center; }
+.hero-photo img {
+    width: 280px; height: 340px; border-radius: var(--radius);
+    object-fit: cover; object-position: top;
+    box-shadow: 0 8px 30px rgba(30,64,175,0.15);
+    border: 4px solid rgba(255,255,255,0.8);
+}
 
 /* === CTA Buttons === */
 .btn {
@@ -264,20 +269,14 @@ nav {
     font-size: 0.82rem; font-weight: 600;
 }
 
-/* === About / Foto Section === */
-.about-content {
-    display: grid; grid-template-columns: 280px 1fr; gap: 2.5rem; align-items: center;
-    max-width: 800px; margin: 0 auto;
+/* === About Section === */
+.about-text-full {
+    max-width: 700px; margin: 0 auto; text-align: center;
 }
-.about-photo img {
-    width: 280px; height: 340px; border-radius: var(--radius);
-    box-shadow: var(--shadow-hover);
-    object-fit: cover; object-position: top;
-}
-.about-text h2 {
+.about-text-full h2 {
     font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 0.75rem;
 }
-.about-text p {
+.about-text-full p {
     font-size: 0.95rem; color: var(--text-light); line-height: 1.75; margin-bottom: 0.75rem;
 }
 
@@ -577,15 +576,12 @@ a.thema-card { display: block; text-decoration: none; color: inherit; }
     .hero { padding: 5.5rem 0 2.5rem; }
     .hero-content { grid-template-columns: 1fr; gap: 2rem; }
     .hero-text h1 { font-size: 1.6rem; }
-    .hero-illustration svg { max-width: 260px; }
+    .hero-photo img { width: 220px; height: 280px; }
 
     .steps { grid-template-columns: 1fr; gap: 1.5rem; }
     .local-content { grid-template-columns: 1fr; gap: 1.5rem; }
     .leistungen-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: 1fr; }
-
-    .about-content { grid-template-columns: 1fr; gap: 1.5rem; max-width: 100%; text-align: center; }
-    .about-photo img { width: 220px; height: 280px; margin: 0 auto; }
     .footer-content { flex-direction: column; gap: 0.75rem; text-align: center; }
     .section-header h2 { font-size: 1.4rem; }
     .contact-box { padding: 2rem 1.5rem; }
