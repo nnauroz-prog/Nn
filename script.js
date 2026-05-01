@@ -104,48 +104,83 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ----- Hero-Video: zuverlässige Wiedergabe ----- */
+  /* ----- Hero-Video: zuverlässiges Autoplay -----
+     Strategie: muted-State auf jeder Ebene (HTML-Attribut, JS-Property,
+     volume=0) festschreiben, das Video aktiv laden und bei jedem
+     Browser-Loading-Event einen Play-Versuch starten. Keine pause()-
+     Calls aus IntersectionObservern — die fechten Autoplay an. */
   if (heroVideo) {
-    const tryPlay = () => {
-      const p = heroVideo.play();
-      if (p && typeof p.catch === 'function') p.catch(() => {});
+    // Muted hart festschreiben — manche Browser respektieren das HTML-Attribut
+    // alleine nicht zuverlässig (z.B. iOS Safari Low Power Mode, Edge).
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+    heroVideo.volume = 0;
+    heroVideo.setAttribute('muted', '');
+    heroVideo.setAttribute('playsinline', '');
+    heroVideo.setAttribute('webkit-playsinline', '');
+    // Video soll inline laufen, NICHT in den Vollbild-Player iOSs springen
+    heroVideo.playsInline = true;
+
+    const playVideo = () => {
+      // Vor jedem Play-Aufruf muted erneut sicherstellen — manche Tools
+      // (z.B. Browser-Erweiterungen) setzen das zurück.
+      heroVideo.muted = true;
+      const promise = heroVideo.play();
+      if (promise && typeof promise.catch === 'function') {
+        promise.catch(() => { /* Wiederholung beim nächsten Event */ });
+      }
     };
 
-    // Sofort versuchen
-    tryPlay();
+    // Sofortiger Versuch, sobald das Script läuft
+    playVideo();
 
-    // Wenn Metadaten/Daten geladen sind, nochmal versuchen
-    heroVideo.addEventListener('loadedmetadata', tryPlay, { once: true });
-    heroVideo.addEventListener('canplay', tryPlay, { once: true });
-    heroVideo.addEventListener('canplaythrough', tryPlay, { once: true });
+    // Bei jedem Loading-Meilenstein einen Versuch starten
+    ['loadstart','loadedmetadata','loadeddata','canplay','canplaythrough','progress']
+      .forEach(ev => heroVideo.addEventListener(ev, playVideo, { passive: true }));
 
-    // Auf der ersten User-Interaktion (Touch/Click/Scroll) erneut versuchen
-    // — das umgeht Autoplay-Blocker auf iOS / strikten Browsern
-    const userKick = () => {
-      tryPlay();
-      ['touchstart','click','scroll','keydown'].forEach(ev =>
-        document.removeEventListener(ev, userKick)
+    // Falls der Browser ohne Grund pausiert hat — sofort weitermachen
+    heroVideo.addEventListener('pause', () => {
+      // Nur wenn das Video noch im Viewport ist (oben auf der Seite)
+      if (window.scrollY < window.innerHeight * 0.95) {
+        setTimeout(playVideo, 50);
+      }
+    });
+
+    // Aktiv laden (preload="auto" alleine reicht manchmal nicht)
+    try { heroVideo.load(); } catch (e) {}
+
+    // Erste User-Interaktion entsperrt Autoplay in jedem Fall
+    const interactionEvents = ['click','touchstart','touchend','scroll','keydown','mousemove','wheel','pointerdown'];
+    const onInteraction = () => {
+      playVideo();
+      interactionEvents.forEach(ev =>
+        document.removeEventListener(ev, onInteraction, { passive: true })
       );
     };
-    ['touchstart','click','scroll','keydown'].forEach(ev =>
-      document.addEventListener(ev, userKick, { once: true, passive: true })
+    interactionEvents.forEach(ev =>
+      document.addEventListener(ev, onInteraction, { once: true, passive: true })
     );
 
-    // Pause / Resume je nach Sichtbarkeit (Performance & Mobile-Akku)
-    if ('IntersectionObserver' in window) {
-      const heroEl = document.querySelector('.hero');
-      if (heroEl) {
-        const vio = new IntersectionObserver(([entry]) => {
-          if (entry.isIntersecting) tryPlay();
-          else heroVideo.pause();
-        }, { threshold: 0.01 });
-        vio.observe(heroEl);
-      }
-    }
-
-    // Bei Pause durch Browser (z.B. Tab-Wechsel) wieder anwerfen, sobald Tab aktiv
+    // Wenn der Tab wieder aktiv wird, Video weiterlaufen lassen
     document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) tryPlay();
+      if (!document.hidden) playVideo();
     });
+
+    // Wenn das Fenster Fokus bekommt
+    window.addEventListener('focus', playVideo);
+
+    // Periodischer Watchdog: alle 1 Sekunde prüfen ob das Video läuft,
+    // und falls nicht (und es sollte), erneut starten. Stoppt automatisch
+    // nach ein paar erfolgreichen Sekunden.
+    let attempts = 0;
+    const watchdog = setInterval(() => {
+      attempts++;
+      if (heroVideo.paused && window.scrollY < window.innerHeight) {
+        playVideo();
+      }
+      if (attempts > 15 || (!heroVideo.paused && heroVideo.currentTime > 1)) {
+        clearInterval(watchdog);
+      }
+    }, 800);
   }
 })();
