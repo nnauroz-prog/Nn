@@ -741,18 +741,18 @@ p + p { margin-top: 1rem; }
 }
 .chapter-image:hover .chapter-photo { transform: scale(1.02); }
 
-/* Champagne hairline frame */
+/* Champagne hairline frame — versetzt für editorialen Look */
 .chapter-image::before {
   content: '';
   position: absolute;
-  inset: -1.5rem;
+  inset: 1.75rem -1.75rem -1.75rem 1.75rem;
   border: 1px solid var(--champagne);
   pointer-events: none;
   z-index: -1;
-  opacity: 0.45;
+  opacity: 0.55;
 }
 .chapter--left .chapter-image::before {
-  inset: -1.5rem -1.5rem -1.5rem 1.5rem;
+  inset: 1.75rem 1.75rem -1.75rem -1.75rem;
 }
 
 .chapter-image figcaption {
@@ -927,14 +927,15 @@ p + p { margin-top: 1rem; }
 
 .badge {
   position: absolute;
-  top: -1px; right: 2rem;
-  padding: 0.5rem 1rem;
+  top: 0; right: 0;
+  padding: 0.55rem 1.1rem;
   background: var(--champagne);
   color: var(--white);
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.32em;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 /* ==========================================================================
@@ -1005,6 +1006,109 @@ p + p { margin-top: 1rem; }
 }
 .ed-item figcaption span:last-child {
   color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   KULINARIK — Afghanisch & multikulturell
+   ========================================================================== */
+.section-cuisine {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184,153,104,0.05) 0%, transparent 50%),
+    var(--pearl);
+  position: relative;
+}
+.section-cuisine::before {
+  content: '';
+  position: absolute;
+  top: 5rem; left: 50%;
+  transform: translateX(-50%);
+  width: 60px; height: 1px;
+  background: var(--champagne);
+  opacity: 0.5;
+}
+.cuisine-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+.cuisine-card {
+  position: relative;
+  padding: 3rem 2.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  transition: all .5s var(--ease);
+}
+.cuisine-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: transparent;
+}
+.cuisine-card--center {
+  background: var(--cream);
+  border-color: var(--champagne-soft);
+  position: relative;
+}
+.cuisine-card--center::before {
+  content: '';
+  position: absolute;
+  top: -1px; left: 0; right: 0;
+  height: 2px;
+  background: var(--champagne);
+}
+.cuisine-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  letter-spacing: 0.15em;
+  color: var(--champagne);
+  margin-bottom: 0.75rem;
+}
+.cuisine-card h3 {
+  font-size: 1.55rem;
+  margin-bottom: 0.4rem;
+}
+.cuisine-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 1.75rem;
+}
+.cuisine-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.cuisine-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.cuisine-card li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.7rem;
+  width: 8px; height: 1px;
+  background: var(--champagne);
+  opacity: 0.6;
+}
+.cuisine-note {
+  margin-top: 4rem;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--ink);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  text-align: center;
+}
+.cuisine-note em {
+  color: var(--ink);
 }
 
 /* ==========================================================================
@@ -1119,10 +1223,10 @@ p + p { margin-top: 1rem; }
 .host-frame::after {
   content: '';
   position: absolute;
-  inset: -1.5rem -1.5rem 1.5rem 1.5rem;
+  inset: 1.75rem 1.75rem -1.75rem -1.75rem;
   border: 1px solid var(--champagne);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 /* ==========================================================================
@@ -1401,6 +1505,7 @@ p + p { margin-top: 1rem; }
   .features-grid .feature:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 
   .services-grid { grid-template-columns: 1fr; max-width: 540px; margin: 3rem auto 0; }
+  .cuisine-grid { grid-template-columns: 1fr; max-width: 540px; margin: 3rem auto 0; }
 
   .chapter-inner,
   .chapter--left .chapter-inner {
@@ -1425,7 +1530,7 @@ p + p { margin-top: 1rem; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
 
   .hero-side, .hero-frame { display: none; }
-  .hero-meta, .hero-scroll { bottom: 2rem; }
+  .hero-meta, .hero-scroll { bottom: 2.5rem; }
   .hero-meta { right: 1.5rem; font-size: 0.85rem; }
   .hero-meta-line { width: 30px; }
   .hero-scroll { left: 1.5rem; }
@@ -1433,18 +1538,16 @@ p + p { margin-top: 1rem; }
 }
 
 @media (max-width: 900px) {
-  /* iOS Safari hat Probleme mit position:fixed Videos — auf Mobile Standbild */
-  .hero-video { display: none; }
-  .hero-image {
-    position: absolute;
-    height: 100%;
-    background-attachment: scroll;
-  }
+  /* iOS Safari mag kein position:fixed bei Videos — wir nehmen absolute innerhalb von .hero */
+  .hero { overflow: hidden; }
+  .hero-video,
+  .hero-image,
   .hero-veil {
     position: absolute;
+    top: 0; left: 0;
+    width: 100%;
     height: 100%;
   }
-  .hero { overflow: hidden; }
 }
 
 @media (max-width: 768px) {

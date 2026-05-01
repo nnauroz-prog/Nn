@@ -104,15 +104,48 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ----- Pause video when not in viewport (Performance) ----- */
-  if (heroVideo && 'IntersectionObserver' in window) {
-    const vio = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        heroVideo.play().catch(() => {});
-      } else {
-        heroVideo.pause();
+  /* ----- Hero-Video: zuverlässige Wiedergabe ----- */
+  if (heroVideo) {
+    const tryPlay = () => {
+      const p = heroVideo.play();
+      if (p && typeof p.catch === 'function') p.catch(() => {});
+    };
+
+    // Sofort versuchen
+    tryPlay();
+
+    // Wenn Metadaten/Daten geladen sind, nochmal versuchen
+    heroVideo.addEventListener('loadedmetadata', tryPlay, { once: true });
+    heroVideo.addEventListener('canplay', tryPlay, { once: true });
+    heroVideo.addEventListener('canplaythrough', tryPlay, { once: true });
+
+    // Auf der ersten User-Interaktion (Touch/Click/Scroll) erneut versuchen
+    // — das umgeht Autoplay-Blocker auf iOS / strikten Browsern
+    const userKick = () => {
+      tryPlay();
+      ['touchstart','click','scroll','keydown'].forEach(ev =>
+        document.removeEventListener(ev, userKick)
+      );
+    };
+    ['touchstart','click','scroll','keydown'].forEach(ev =>
+      document.addEventListener(ev, userKick, { once: true, passive: true })
+    );
+
+    // Pause / Resume je nach Sichtbarkeit (Performance & Mobile-Akku)
+    if ('IntersectionObserver' in window) {
+      const heroEl = document.querySelector('.hero');
+      if (heroEl) {
+        const vio = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) tryPlay();
+          else heroVideo.pause();
+        }, { threshold: 0.01 });
+        vio.observe(heroEl);
       }
-    }, { threshold: 0.05 });
-    vio.observe(document.querySelector('.hero'));
+    }
+
+    // Bei Pause durch Browser (z.B. Tab-Wechsel) wieder anwerfen, sobald Tab aktiv
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) tryPlay();
+    });
   }
 })();
