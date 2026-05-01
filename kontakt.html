@@ -16,17 +16,22 @@
   <header class="site-header scrolled" id="siteHeader">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="Villa Dream – Startseite">
-        <span class="brand-mark">VD</span>
+        <span class="brand-monogram" aria-hidden="true">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="0.8" />
+            <text x="30" y="38" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="500" fill="currentColor" font-style="italic">VD</text>
+          </svg>
+        </span>
         <span class="brand-text">
           <span class="brand-name">Villa Dream</span>
-          <span class="brand-sub">Hamburg</span>
+          <span class="brand-sub">Hamburg · Est. 2019</span>
         </span>
       </a>
       <nav class="nav" id="primaryNav" aria-label="Hauptnavigation">
-        <a href="index.html#location">Location</a>
+        <a href="index.html#saal">Der Saal</a>
         <a href="index.html#leistungen">Leistungen</a>
         <a href="index.html#galerie">Galerie</a>
-        <a href="index.html#ueber-uns">Über uns</a>
+        <a href="index.html#mohammad">Gastgeber</a>
         <a href="index.html#faq">FAQ</a>
         <a href="kontakt.html" class="nav-cta">Termin anfragen</a>
       </nav>
@@ -39,11 +44,11 @@
   <main class="page-main">
     <section class="section">
       <div class="container narrow center reveal" style="padding-top:5rem;">
-        <p class="eyebrow">Kontakt</p>
-        <h1 class="section-title">Erzählen Sie uns von Ihrem Tag</h1>
+        <p class="chapter-label">— Kontakt —</p>
+        <h1 class="display">Erzählen Sie uns<br /><em>von Ihrem Tag.</em></h1>
         <p class="lead">
-          Senden Sie uns eine kurze Nachricht – wir melden uns innerhalb von 24 Stunden
-          bei Ihnen mit einem persönlichen Vorschlag.
+          Senden Sie uns eine kurze Nachricht — wir melden uns innerhalb von
+          24 Stunden bei Ihnen mit einem persönlichen Vorschlag.
         </p>
       </div>
 
@@ -107,43 +112,24 @@
       <div class="container">
         <div class="features-grid">
           <article class="feature reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </div>
+            <span class="feature-num">i.</span>
             <h3>Adresse</h3>
-            <p>An der Alster 47<br>22087 Hamburg</p>
+            <p>An der Alster 47<br />22087 Hamburg</p>
           </article>
           <article class="feature reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z" />
-              </svg>
-            </div>
+            <span class="feature-num">ii.</span>
             <h3>Telefon</h3>
             <p><a href="tel:+494041364780">+49 40 41 36 47 80</a></p>
           </article>
           <article class="feature reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <rect x="3" y="5" width="18" height="14" rx="1.5" />
-                <path d="M3 7l9 6 9-6" />
-              </svg>
-            </div>
+            <span class="feature-num">iii.</span>
             <h3>E-Mail</h3>
             <p><a href="mailto:hallo@villa-dream-hamburg.de">hallo@villa-dream-hamburg.de</a></p>
           </article>
           <article class="feature reveal">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 7v5l3 2" />
-              </svg>
-            </div>
+            <span class="feature-num">iv.</span>
             <h3>Beratung</h3>
-            <p>Mo – Fr · 10 – 18 Uhr<br>Sa nach Vereinbarung</p>
+            <p>Mo – Fr · 10 – 18 Uhr<br />Sa nach Vereinbarung</p>
           </article>
         </div>
       </div>
@@ -152,17 +138,18 @@
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <div class="brand brand--footer">
-          <span class="brand-mark">VD</span>
-          <span class="brand-text">
-            <span class="brand-name">Villa Dream</span>
-            <span class="brand-sub">Hamburg</span>
-          </span>
-        </div>
+      <div class="footer-brand">
+        <span class="brand-monogram brand-monogram--footer" aria-hidden="true">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="0.8" />
+            <text x="30" y="38" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="500" fill="currentColor" font-style="italic">VD</text>
+          </svg>
+        </span>
+        <span class="brand-name">Villa Dream</span>
+        <span class="brand-sub">Hamburg · Est. 2019</span>
         <p class="footer-text">
-          Ihre Hochzeitslocation in Hamburg.<br />
-          Stilvoll. Persönlich. Unvergesslich.
+          Eine Hochzeit pro Tag.<br />
+          Eine Erinnerung für ein Leben.
         </p>
       </div>
       <div>
@@ -174,13 +161,13 @@
         </p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4>Erkunden</h4>
         <ul class="footer-nav">
-          <li><a href="index.html#willkommen">Willkommen</a></li>
-          <li><a href="index.html#location">Location</a></li>
+          <li><a href="index.html#saal">Der Saal</a></li>
           <li><a href="index.html#leistungen">Leistungen</a></li>
           <li><a href="index.html#galerie">Galerie</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="index.html#mohammad">Gastgeber</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
         </ul>
       </div>
       <div>
@@ -192,7 +179,8 @@
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Villa Dream Hamburg. Alle Rechte vorbehalten.</p>
+      <p>&copy; <span id="year"></span> Villa Dream Hamburg · Alle Rechte vorbehalten</p>
+      <p class="footer-fineprint">Mit Sorgfalt entworfen in Hamburg.</p>
     </div>
   </footer>
 

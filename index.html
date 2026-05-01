@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Villa Dream Hamburg – Ihre exklusive Hochzeitslocation für unvergessliche Momente. Eleganter Hochzeitssaal in Hamburg mit Stil, Atmosphäre und persönlichem Service." />
-  <meta name="keywords" content="Hochzeitssaal Hamburg, Hochzeitslocation Hamburg, Villa Dream, Heiraten in Hamburg, Hochzeitsfeier Hamburg, Eventlocation Hamburg" />
+  <meta name="description" content="Villa Dream Hamburg – Exklusive Hochzeitslocation für Ihre Traumhochzeit. Marmor, Kristallleuchter, persönlicher Service im Herzen Hamburgs." />
+  <meta name="keywords" content="Hochzeitssaal Hamburg, Hochzeitslocation Hamburg, Villa Dream, exklusive Hochzeit Hamburg, Eventlocation Hamburg" />
   <meta name="author" content="Villa Dream Hamburg" />
 
-  <meta property="og:title" content="Villa Dream – Hochzeitslocation in Hamburg" />
+  <meta property="og:title" content="Villa Dream — Hochzeitslocation in Hamburg" />
   <meta property="og:description" content="Wo Träume Wirklichkeit werden. Ihre exklusive Hochzeitslocation im Herzen Hamburgs." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="de_DE" />
 
-  <title>Villa Dream – Hochzeitslocation in Hamburg</title>
+  <title>Villa Dream — Hochzeitslocation Hamburg</title>
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=Italianno&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,20 +25,25 @@
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="Villa Dream – Startseite">
-        <span class="brand-mark">VD</span>
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="Villa Dream — Startseite">
+        <span class="brand-monogram" aria-hidden="true">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="0.8" />
+            <text x="30" y="38" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="500" fill="currentColor" font-style="italic">VD</text>
+          </svg>
+        </span>
         <span class="brand-text">
           <span class="brand-name">Villa Dream</span>
-          <span class="brand-sub">Hamburg</span>
+          <span class="brand-sub">Hamburg · Est. 2019</span>
         </span>
       </a>
 
       <nav class="nav" id="primaryNav" aria-label="Hauptnavigation">
-        <a href="#location">Location</a>
+        <a href="#saal">Der Saal</a>
         <a href="#leistungen">Leistungen</a>
         <a href="#galerie">Galerie</a>
-        <a href="#ueber-uns">Über uns</a>
+        <a href="#mohammad">Gastgeber</a>
         <a href="#faq">FAQ</a>
         <a href="kontakt.html" class="nav-cta">Termin anfragen</a>
       </nav>
@@ -51,90 +56,60 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="hero-media" aria-hidden="true">
-      <div class="hero-image"></div>
-      <div class="hero-veil"></div>
+    <div class="hero-image" aria-hidden="true"></div>
+    <div class="hero-veil" aria-hidden="true"></div>
+
+    <div class="hero-frame" aria-hidden="true"></div>
+
+    <div class="hero-side" aria-hidden="true">
+      <span>Hochzeitslocation · Hamburg</span>
     </div>
 
-    <div class="hero-content container">
-      <p class="eyebrow">Hochzeitslocation · Hamburg</p>
+    <div class="hero-content">
+      <p class="hero-eyebrow">— Est. 2019 · An der Alster</p>
       <h1 class="hero-title">
-        <span class="script">Wo Träume</span>
-        <span class="serif">Wirklichkeit werden</span>
+        <span class="hero-script">Villa Dream</span>
+        <span class="hero-serif">Wo Träume Wirklichkeit werden.</span>
       </h1>
       <p class="hero-subtitle">
-        Willkommen in der Villa Dream – Ihrem exklusiven Hochzeitssaal im Herzen Hamburgs.
-        Stilvoll, persönlich und unvergesslich.
+        Eine Hochzeitslocation im Herzen Hamburgs. Marmor, Kristall, Stille.<br />
+        Eine Hochzeit pro Tag — damit der Tag ganz allein Ihnen gehört.
       </p>
       <div class="hero-actions">
-        <a href="kontakt.html" class="btn btn-primary">Unverbindlich anfragen</a>
-        <a href="#location" class="btn btn-ghost">Location entdecken</a>
+        <a href="kontakt.html" class="btn btn-primary">Privatbesichtigung anfragen</a>
+        <a href="#saal" class="btn-link">
+          <span>Den Saal entdecken</span>
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
 
-    <a href="#willkommen" class="hero-scroll" aria-label="Nach unten scrollen">
-      <span></span>
+    <div class="hero-meta" aria-hidden="true">
+      <span>I.</span>
+      <span class="hero-meta-line"></span>
+      <span>Hamburg</span>
+    </div>
+
+    <a href="#prolog" class="hero-scroll" aria-label="Nach unten scrollen">
+      <span>Scroll</span>
+      <span class="hero-scroll-line"></span>
     </a>
   </section>
 
-  <!-- ============ WILLKOMMEN ============ -->
-  <section class="section section-intro" id="willkommen">
-    <div class="container narrow center reveal">
-      <p class="eyebrow">Willkommen</p>
-      <h2 class="section-title">Ein Ort für die schönsten Momente Ihres Lebens</h2>
-      <p class="lead">
-        Die Villa Dream ist mehr als eine Hochzeitslocation – sie ist die Bühne für
-        Ihren ganz besonderen Tag. Mit klarer, zeitloser Eleganz, viel Tageslicht
-        und einem Team, das jeden Wunsch versteht, schaffen wir den Rahmen für eine
-        Hochzeit, an die Sie sich ein Leben lang erinnern werden.
+  <!-- ============ PROLOG ============ -->
+  <section class="section section-prolog" id="prolog">
+    <div class="container narrow center">
+      <p class="chapter-label reveal">— Prolog —</p>
+      <h2 class="display reveal">
+        Manche Räume <em>flüstern</em>.<br />
+        Andere <em>erinnern</em> sich.
+      </h2>
+      <p class="lead reveal">
+        Die Villa Dream ist keine Hochzeitslocation von der Stange.
+        Sie ist ein Ort, der weiß, wie sich der schönste Tag anfühlen muss —
+        und der nichts dem Zufall überlässt. Marmor unter den Füßen,
+        Kristall über den Köpfen, Stille zwischen den Augenblicken.
       </p>
-    </div>
-  </section>
-
-  <!-- ============ FEATURES ============ -->
-  <section class="section section-features">
-    <div class="container">
-      <div class="features-grid">
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-              <path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.5-9 9-9 9z" />
-            </svg>
-          </div>
-          <h3>Persönlich &amp; familiär</h3>
-          <p>Wir betreuen nur eine Hochzeit pro Tag – damit der Tag ganz allein Ihnen gehört.</p>
-        </article>
-
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-              <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" />
-            </svg>
-          </div>
-          <h3>Saal mit Charakter</h3>
-          <p>Hohe Decken, weiße Wände, warmes Licht – ein zeitloser Rahmen für jede Vision.</p>
-        </article>
-
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-              <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3" />
-            </svg>
-          </div>
-          <h3>Volle Flexibilität</h3>
-          <p>Ob 50 oder 250 Gäste, freie Trauung oder Galadinner – wir richten uns nach Ihnen.</p>
-        </article>
-
-        <article class="feature reveal">
-          <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-              <path d="M12 6v6l4 2M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z" />
-            </svg>
-          </div>
-          <h3>Alles aus einer Hand</h3>
-          <p>Catering, Floristik, Musik &amp; Service – auf Wunsch übernehmen wir die komplette Planung.</p>
-        </article>
-      </div>
     </div>
   </section>
 
@@ -144,99 +119,209 @@
       <div class="stats-grid">
         <div class="stat reveal">
           <span class="stat-number">400<span class="stat-unit">m²</span></span>
-          <span class="stat-label">Saalfläche mit Tageslicht</span>
+          <span class="stat-label">Saalfläche</span>
         </div>
         <div class="stat reveal">
           <span class="stat-number">250</span>
-          <span class="stat-label">Gäste im Galadinner</span>
+          <span class="stat-label">Gäste · Galadinner</span>
         </div>
         <div class="stat reveal">
           <span class="stat-number">1</span>
-          <span class="stat-label">Hochzeit pro Tag &middot; exklusiv</span>
+          <span class="stat-label">Hochzeit pro Tag</span>
         </div>
         <div class="stat reveal">
-          <span class="stat-number">2019</span>
-          <span class="stat-label">Eröffnet im Herzen Hamburgs</span>
+          <span class="stat-number">12+</span>
+          <span class="stat-label">Stunden Ihre Bühne</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ LOCATION ============ -->
-  <section class="section section-split" id="location">
-    <div class="container split">
-      <div class="split-media reveal">
-        <div class="image-frame image-frame--1"></div>
-      </div>
-      <div class="split-content reveal">
-        <p class="eyebrow">Die Location</p>
-        <h2 class="section-title">Eleganz in jedem Detail</h2>
+  <!-- ============ KAPITEL I — DER SAAL ============ -->
+  <section class="chapter chapter--right" id="saal">
+    <div class="chapter-inner">
+      <figure class="chapter-image reveal">
+        <div class="chapter-photo chapter-photo--1"></div>
+        <figcaption>I. Der Saal · 400 m² Marmor &amp; Kristall</figcaption>
+      </figure>
+
+      <div class="chapter-text reveal">
+        <p class="chapter-num">I.</p>
+        <p class="chapter-label">Der Saal</p>
+        <h2 class="display">Eine Bühne aus<br />Marmor und Licht.</h2>
         <p>
-          Hohe weiße Wände, große Sprossenfenster und stimmungsvolles Licht – die
-          Villa Dream ist ein Saal, der für sich selbst spricht. Auf rund 400 m²
-          haben Sie Raum für Trauung, Dinner und Tanz – fließend ineinander
-          übergehend, ohne Umbau, ohne Stress.
+          Hohe weiße Wände mit feinen Kassetten, ein Boden aus poliertem
+          Carrara-Marmor, zwei Kristall-Lüster, indirekte Wandbeleuchtung
+          in warmem Weiß. Die Villa Dream ist klassisch in der Form,
+          modern in jedem Detail.
         </p>
         <ul class="check-list">
-          <li>Bis zu 250 Gäste im Galadinner-Setup</li>
-          <li>Separater Sektempfang &amp; Außenbereich</li>
-          <li>Brautzimmer mit Tageslicht</li>
-          <li>Modernste Licht- &amp; Tontechnik</li>
-          <li>Großzügige Parkplätze direkt am Haus</li>
+          <li>400 m² Hauptsaal mit Tageslicht</li>
+          <li>Bis 250 Gäste im Galadinner-Setup</li>
+          <li>Dimmbare Kristall-Lüster &amp; Cove-Lighting</li>
+          <li>Klimatisiert · barrierefrei</li>
         </ul>
-        <a href="kontakt.html" class="btn btn-primary">Besichtigung vereinbaren</a>
+        <a href="kontakt.html" class="btn-link">
+          <span>Besichtigung vereinbaren</span>
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ LEISTUNGEN ============ -->
+  <!-- ============ KAPITEL II — DIE TAFEL ============ -->
+  <section class="chapter chapter--left">
+    <div class="chapter-inner">
+      <figure class="chapter-image reveal">
+        <div class="chapter-photo chapter-photo--2"></div>
+        <figcaption>II. Die Tafel · Galadinner für bis zu 250</figcaption>
+      </figure>
+
+      <div class="chapter-text reveal">
+        <p class="chapter-num">II.</p>
+        <p class="chapter-label">Die Tafel</p>
+        <h2 class="display">Wo aus Gästen<br />Familie wird.</h2>
+        <p>
+          Lange Tafeln oder runde Tische, Galadinner oder Buffet, Champagner-
+          Empfang oder Cocktailbar — der Saal lässt sich für jede Form der
+          Bewirtung kleiden. Das Service-Team bleibt im Hintergrund, der
+          Abend gehört Ihren Gästen.
+        </p>
+        <ul class="check-list">
+          <li>Eigene Küche · saisonal &amp; regional</li>
+          <li>4-Gang-Menü oder Flying Buffet</li>
+          <li>Eigene Bar mit Sommelier-Auswahl</li>
+          <li>Service-Schlüssel 1 : 12</li>
+        </ul>
+        <a href="#leistungen" class="btn-link">
+          <span>Pakete ansehen</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KAPITEL III — DIE TRAUUNG ============ -->
+  <section class="chapter chapter--right">
+    <div class="chapter-inner">
+      <figure class="chapter-image reveal">
+        <div class="chapter-photo chapter-photo--3"></div>
+        <figcaption>III. Die Trauung · Freie Zeremonie im Saal</figcaption>
+      </figure>
+
+      <div class="chapter-text reveal">
+        <p class="chapter-num">III.</p>
+        <p class="chapter-label">Die Trauung</p>
+        <h2 class="display">Der Augenblick,<br />um den sich alles dreht.</h2>
+        <p>
+          Standesamtliche oder freie Trauung — direkt im Saal, am Ende des
+          Marmorgangs, unter dem großen Kristall-Lüster. Anschließend
+          fließend in Sektempfang und Dinner, ohne Locationwechsel,
+          ohne Wartezeit, ohne Unterbrechung.
+        </p>
+        <ul class="check-list">
+          <li>Anerkannter Trauort des Standesamts Hamburg</li>
+          <li>Freie Trauung mit eigenem Redner möglich</li>
+          <li>Bridal Suite mit Tageslicht</li>
+          <li>Übergangslos · Trauung → Empfang → Dinner</li>
+        </ul>
+        <a href="kontakt.html" class="btn-link">
+          <span>Termin anfragen</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section section-features">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="chapter-label">— Was uns ausmacht —</p>
+        <h2 class="display">Vier Versprechen.</h2>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature reveal">
+          <span class="feature-num">01</span>
+          <h3>Exklusivität</h3>
+          <p>Eine Hochzeit pro Tag. Das ganze Haus, das ganze Team, der ganze Tag — gehört Ihnen.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature-num">02</span>
+          <h3>Eigenes Küchenteam</h3>
+          <p>Saisonal, regional, mit Anspruch. Vom Champagner-Empfang bis zur Mitternachts-Suppe.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature-num">03</span>
+          <h3>Persönlicher Planer</h3>
+          <p>Ein fester Ansprechpartner von der ersten Anfrage bis zum letzten Tanz. Diskret, präzise, da.</p>
+        </article>
+
+        <article class="feature reveal">
+          <span class="feature-num">04</span>
+          <h3>Alles unter einem Dach</h3>
+          <p>Trauung, Empfang, Dinner, Tanz, Bridal Suite — kein Locationwechsel, kein Stress.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEISTUNGEN / PAKETE ============ -->
   <section class="section section-services" id="leistungen">
     <div class="container">
       <div class="section-head center reveal">
-        <p class="eyebrow">Leistungen</p>
-        <h2 class="section-title">Ihr Tag. Ihre Vision. Unser Versprechen.</h2>
+        <p class="chapter-label">— Pakete —</p>
+        <h2 class="display">Drei Wege zur Traumhochzeit.</h2>
         <p class="lead">
-          Drei Pakete, unendlich viele Möglichkeiten – als Ausgangspunkt für Ihre
-          ganz individuelle Hochzeit.
+          Als Ausgangspunkt — alles ist individuell verhandelbar.
+          Auf Wunsch erstellen wir Ihnen ein vollständig maßgeschneidertes Angebot.
         </p>
       </div>
 
       <div class="services-grid">
         <article class="service-card reveal">
+          <p class="service-num">— I —</p>
           <h3>Essential</h3>
           <p class="service-tag">Die Location pur</p>
           <ul>
-            <li>Exklusive Saalmiete</li>
+            <li>Exklusive Saalmiete · 12 Std.</li>
             <li>Bestuhlung &amp; Tische</li>
-            <li>Basis-Beleuchtung</li>
-            <li>Reinigung inklusive</li>
+            <li>Basis-Beleuchtung &amp; Reinigung</li>
+            <li>Brautzimmer mit Tageslicht</li>
           </ul>
-          <a href="kontakt.html" class="link-arrow">Anfragen →</a>
+          <a href="kontakt.html" class="btn-link"><span>Anfragen</span><span class="arrow">→</span></a>
         </article>
 
         <article class="service-card service-card--highlight reveal">
-          <span class="badge">Beliebt</span>
+          <span class="badge">Empfohlen</span>
+          <p class="service-num">— II —</p>
           <h3>Signature</h3>
           <p class="service-tag">Das Rundum-Paket</p>
           <ul>
             <li>Alles aus „Essential"</li>
-            <li>Catering &amp; Getränkeservice</li>
+            <li>4-Gang-Menü &amp; Getränkeservice</li>
             <li>Florale Tischdekoration</li>
             <li>Persönlicher Eventmanager</li>
+            <li>Hochzeitstorte vom Patissier</li>
           </ul>
-          <a href="kontakt.html" class="link-arrow">Anfragen →</a>
+          <a href="kontakt.html" class="btn-link btn-link--inverse"><span>Anfragen</span><span class="arrow">→</span></a>
         </article>
 
         <article class="service-card reveal">
+          <p class="service-num">— III —</p>
           <h3>Couture</h3>
-          <p class="service-tag">Der Traum ohne Kompromisse</p>
+          <p class="service-tag">Ohne Kompromisse</p>
           <ul>
             <li>Alles aus „Signature"</li>
             <li>DJ, Live-Band &amp; Showacts</li>
             <li>Fotograf &amp; Videograf</li>
             <li>Komplette Hochzeitsplanung</li>
+            <li>Bridal Suite mit Übernachtung</li>
           </ul>
-          <a href="kontakt.html" class="link-arrow">Anfragen →</a>
+          <a href="kontakt.html" class="btn-link"><span>Anfragen</span><span class="arrow">→</span></a>
         </article>
       </div>
     </div>
@@ -246,46 +331,32 @@
   <section class="section section-gallery" id="galerie">
     <div class="container">
       <div class="section-head center reveal">
-        <p class="eyebrow">Galerie</p>
-        <h2 class="section-title">Einblicke in die Villa Dream</h2>
+        <p class="chapter-label">— Galerie —</p>
+        <h2 class="display">Einblicke.</h2>
       </div>
 
-      <div class="gallery-grid">
-        <div class="gallery-item gallery-item--tall reveal" data-img="1"></div>
-        <div class="gallery-item reveal" data-img="2"></div>
-        <div class="gallery-item reveal" data-img="3"></div>
-        <div class="gallery-item gallery-item--wide reveal" data-img="4"></div>
-        <div class="gallery-item reveal" data-img="5"></div>
-        <div class="gallery-item reveal" data-img="6"></div>
-      </div>
-
-      <p class="gallery-note center">
-        <em>Echte Bilder Ihrer Villa Dream folgen in Kürze.</em>
-      </p>
-    </div>
-  </section>
-
-  <!-- ============ ÜBER UNS ============ -->
-  <section class="section section-about" id="ueber-uns">
-    <div class="container split split--reverse">
-      <div class="split-content reveal">
-        <p class="eyebrow">Über uns</p>
-        <h2 class="section-title">Eine Familie. Eine Vision.</h2>
-        <p>
-          Sophia und Marcel Berger haben die Villa Dream 2019 als Liebeserklärung
-          an den schönsten Tag im Leben gegründet. Was als Traum einer ehemaligen
-          Hotelmanagerin und eines Sterne-Sommeliers begann, ist heute eine der
-          gefragtesten Hochzeitslocationen Hamburgs.
-        </p>
-        <p>
-          Unser Versprechen: Wir nehmen nur eine Hochzeit pro Tag an. So gehört
-          unser Team, unsere Aufmerksamkeit und das ganze Haus an diesem Tag
-          ausschließlich Ihnen.
-        </p>
-        <p class="signature script-signature">Sophia &amp; Marcel</p>
-      </div>
-      <div class="split-media reveal">
-        <div class="image-frame image-frame--2"></div>
+      <div class="editorial-gallery">
+        <figure class="ed-item ed-item--1 reveal">
+          <div class="ed-photo"></div>
+          <figcaption>
+            <span>01</span>
+            <span>Galadinner-Setup</span>
+          </figcaption>
+        </figure>
+        <figure class="ed-item ed-item--2 reveal">
+          <div class="ed-photo"></div>
+          <figcaption>
+            <span>02</span>
+            <span>Saal &amp; Stage</span>
+          </figcaption>
+        </figure>
+        <figure class="ed-item ed-item--3 reveal">
+          <div class="ed-photo"></div>
+          <figcaption>
+            <span>03</span>
+            <span>Marmorgang</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -294,16 +365,16 @@
   <section class="section section-quote" id="stimmen">
     <div class="container">
       <div class="section-head center reveal">
-        <p class="eyebrow">Stimmen unserer Brautpaare</p>
-        <h2 class="section-title">Was unsere Paare sagen</h2>
+        <p class="chapter-label">— Stimmen —</p>
+        <h2 class="display">Was unsere Paare sagen.</h2>
       </div>
 
       <div class="testimonials-grid">
         <blockquote class="testimonial reveal">
           <p>
-            „Die Villa Dream hat unsere Hochzeit zum schönsten Tag unseres
-            Lebens gemacht. Eleganter Saal, herzliches Team und jedes Detail
-            saß perfekt. Wir würden uns immer wieder dafür entscheiden."
+            Die Villa Dream hat unsere Hochzeit zum schönsten Tag unseres
+            Lebens gemacht. Eleganter Saal, herzliches Team, jedes Detail
+            saß perfekt. Wir würden uns immer wieder dafür entscheiden.
           </p>
           <footer>
             <span class="testimonial-name">Lena &amp; Jonas</span>
@@ -313,9 +384,10 @@
 
         <blockquote class="testimonial reveal">
           <p>
-            „Wir hatten so viele Locations gesehen – aber als wir die Villa Dream
-            zum ersten Mal betraten, war klar: Hier heiraten wir. Sophia und ihr
-            Team haben jeden Wunsch gelesen, bevor wir ihn aussprechen konnten."
+            Wir hatten so viele Locations gesehen — aber als wir die Villa
+            Dream zum ersten Mal betraten, war klar: Hier heiraten wir.
+            Mohammad und sein Team haben jeden Wunsch gelesen, bevor wir
+            ihn aussprechen konnten.
           </p>
           <footer>
             <span class="testimonial-name">Marie &amp; Felix</span>
@@ -325,9 +397,9 @@
 
         <blockquote class="testimonial reveal">
           <p>
-            „Hochwertige Küche, perfektes Timing, und ein Saal, den unsere Gäste
-            immer noch nicht vergessen können. Vier Monate später bekommen wir
-            noch Komplimente. Danke für diesen unvergesslichen Tag."
+            Hochwertige Küche, perfektes Timing, ein Saal, den unsere Gäste
+            immer noch nicht vergessen können. Vier Monate später bekommen
+            wir noch Komplimente. Danke für diesen unvergesslichen Tag.
           </p>
           <footer>
             <span class="testimonial-name">Esra &amp; Daniel</span>
@@ -338,72 +410,106 @@
     </div>
   </section>
 
+  <!-- ============ MOHAMMAD ============ -->
+  <section class="section section-host" id="mohammad">
+    <div class="container split split--reverse">
+      <div class="split-content reveal">
+        <p class="chapter-label">— Der Gastgeber —</p>
+        <h2 class="display">Mohammad.</h2>
+        <p>
+          Hinter der Villa Dream steht Mohammad — Gastgeber aus Leidenschaft,
+          mit dem Anspruch, jede Hochzeit zu einem Erlebnis zu machen, an das
+          sich Brautpaar und Gäste ein Leben lang erinnern.
+        </p>
+        <p>
+          „Ich nehme nur eine Hochzeit pro Tag an. Nicht aus Stolz —
+          aus Respekt. An diesem Tag verdient ein Paar mehr als eine
+          Schicht. Es verdient ein ganzes Haus, ein ganzes Team,
+          eine ganze Aufmerksamkeit."
+        </p>
+        <p class="signature">— Mohammad</p>
+      </div>
+      <div class="split-media reveal">
+        <div class="host-frame">
+          <div class="host-photo"></div>
+          <div class="host-frame-inner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FAQ ============ -->
   <section class="section section-faq" id="faq">
     <div class="container">
       <div class="section-head center reveal">
-        <p class="eyebrow">Häufige Fragen</p>
-        <h2 class="section-title">Gut zu wissen</h2>
+        <p class="chapter-label">— Häufige Fragen —</p>
+        <h2 class="display">Gut zu wissen.</h2>
       </div>
 
       <div class="faq-list">
         <details class="faq-item reveal">
           <summary>
-            <span>Wie viele Gäste passen in die Villa Dream?</span>
+            <span class="faq-num">01</span>
+            <span class="faq-q">Wie viele Gäste passen in die Villa Dream?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Im Galadinner-Setup begrüßen wir bis zu 250 Gäste. Für Sektempfang und Tanz nutzen Sie zusätzlich unseren Außenbereich und die Lounge. Auch kleinere Hochzeiten ab 50 Personen wirken im Saal besonders intim.</p>
+            <p>Im Galadinner-Setup begrüßen wir bis zu 250 Gäste. Auch kleinere Hochzeiten ab 50 Personen wirken im Saal besonders intim — wir passen Bestuhlung und Beleuchtung individuell an.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Kann man bei Ihnen auch standesamtlich oder frei trauen?</span>
+            <span class="faq-num">02</span>
+            <span class="faq-q">Kann man bei Ihnen standesamtlich oder frei trauen?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Ja. Wir sind als Trauort beim Hamburger Standesamt registriert. Freie Trauungen finden bei gutem Wetter im Garten am Wasser statt – mit Schirmlösung bei Regen, ohne Stimmungsverlust.</p>
+            <p>Ja. Wir sind als Trauort beim Hamburger Standesamt registriert. Freie Trauungen finden direkt im Saal am Ende des Marmorgangs statt — übergangslos zum anschließenden Sektempfang.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Wie ist das mit Catering und Getränken geregelt?</span>
+            <span class="faq-num">03</span>
+            <span class="faq-q">Wie ist Catering und Getränke geregelt?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Wir arbeiten mit einem festen Küchenteam, das saisonal und regional kocht – von 4-Gang-Menü bis Flying Buffet. Unsere Getränkekarte deckt alles vom Champagner-Empfang bis zur Cocktailbar ab. Eigene Getränke nach Absprache möglich.</p>
+            <p>Wir arbeiten mit einem festen Küchenteam, das saisonal und regional kocht — von 4-Gang-Menü bis Flying Buffet. Unsere Getränkekarte deckt alles vom Champagner-Empfang bis zur Cocktailbar ab.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Bis wann muss man buchen?</span>
+            <span class="faq-num">04</span>
+            <span class="faq-q">Bis wann muss man buchen?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Beliebte Termine in der Saison Mai – September sind oft 12 – 18 Monate im Voraus vergeben. Wir empfehlen, frühzeitig anzufragen – auch kurzfristige Termine außerhalb der Hauptsaison sind aber regelmäßig verfügbar.</p>
+            <p>Beliebte Termine in der Saison Mai – September sind oft 12 – 18 Monate im Voraus vergeben. Wir empfehlen, frühzeitig anzufragen — kurzfristige Termine außerhalb der Hauptsaison sind aber regelmäßig verfügbar.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Gibt es Übernachtungsmöglichkeiten?</span>
+            <span class="faq-num">05</span>
+            <span class="faq-q">Gibt es Übernachtungsmöglichkeiten?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Direkt im Haus haben wir die Bridal Suite mit Blick auf die Alster. Für Ihre Gäste arbeiten wir mit drei Partnerhotels in 5 – 10 Minuten Entfernung – mit Sonderkonditionen für Hochzeitsgesellschaften.</p>
+            <p>Direkt im Haus haben wir die Bridal Suite mit Blick auf die Alster. Für Ihre Gäste arbeiten wir mit drei Partnerhotels in 5 – 10 Minuten Entfernung — mit Sonderkonditionen für Hochzeitsgesellschaften.</p>
           </div>
         </details>
 
         <details class="faq-item reveal">
           <summary>
-            <span>Wie läuft eine Besichtigung ab?</span>
+            <span class="faq-num">06</span>
+            <span class="faq-q">Wie läuft eine Besichtigung ab?</span>
             <span class="faq-toggle" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <p>Eine Besichtigung dauert ca. 60 Minuten. Sie sehen Saal, Garten und Bridal Suite, wir sprechen über Ihre Vision, zeigen Beispiel-Setups und besprechen Budget und Termine – alles unverbindlich, mit Kaffee oder einem Glas Sekt.</p>
+            <p>Eine Privatbesichtigung dauert ca. 60 Minuten. Sie sehen Saal, Bridal Suite und Außenbereich, wir sprechen über Ihre Vision, zeigen Beispiel-Setups und besprechen Budget — unverbindlich, mit einem Glas Champagner.</p>
           </div>
         </details>
       </div>
@@ -411,16 +517,25 @@
   </section>
 
   <!-- ============ CTA ============ -->
-  <section class="section section-cta">
+  <section class="section-cta">
+    <div class="cta-image" aria-hidden="true"></div>
+    <div class="cta-veil" aria-hidden="true"></div>
     <div class="container narrow center reveal">
-      <h2 class="section-title">Lernen wir uns kennen</h2>
-      <p class="lead">
-        Erzählen Sie uns von Ihrer Traumhochzeit. Wir nehmen uns Zeit für Sie –
-        bei einem persönlichen Gespräch direkt vor Ort.
+      <p class="chapter-label chapter-label--light">— Werden wir Gastgeber —</p>
+      <h2 class="display display--light">
+        <span class="hero-script">Erzählen Sie uns</span>
+        <span>von Ihrem Tag.</span>
+      </h2>
+      <p class="lead lead--light">
+        Wir nehmen uns Zeit für Sie — bei einem persönlichen Gespräch
+        direkt vor Ort. Champagner inklusive.
       </p>
-      <div class="hero-actions center">
-        <a href="kontakt.html" class="btn btn-primary">Termin anfragen</a>
-        <a href="tel:+494041364780" class="btn btn-ghost">+49 40 41 36 47 80</a>
+      <div class="cta-actions">
+        <a href="kontakt.html" class="btn btn-primary btn-primary--light">Privatbesichtigung anfragen</a>
+        <a href="tel:+494041364780" class="btn-link btn-link--light">
+          <span>+49 40 41 36 47 80</span>
+          <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -428,17 +543,18 @@
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div>
-        <div class="brand brand--footer">
-          <span class="brand-mark">VD</span>
-          <span class="brand-text">
-            <span class="brand-name">Villa Dream</span>
-            <span class="brand-sub">Hamburg</span>
-          </span>
-        </div>
+      <div class="footer-brand">
+        <span class="brand-monogram brand-monogram--footer" aria-hidden="true">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="0.8" />
+            <text x="30" y="38" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-weight="500" fill="currentColor" font-style="italic">VD</text>
+          </svg>
+        </span>
+        <span class="brand-name">Villa Dream</span>
+        <span class="brand-sub">Hamburg · Est. 2019</span>
         <p class="footer-text">
-          Ihre Hochzeitslocation in Hamburg.<br />
-          Stilvoll. Persönlich. Unvergesslich.
+          Eine Hochzeit pro Tag.<br />
+          Eine Erinnerung für ein Leben.
         </p>
       </div>
 
@@ -453,14 +569,14 @@
       </div>
 
       <div>
-        <h4>Navigation</h4>
+        <h4>Erkunden</h4>
         <ul class="footer-nav">
-          <li><a href="#location">Location</a></li>
+          <li><a href="#saal">Der Saal</a></li>
           <li><a href="#leistungen">Leistungen</a></li>
           <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#mohammad">Gastgeber</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html">Anfrage</a></li>
         </ul>
       </div>
 
@@ -474,7 +590,8 @@
     </div>
 
     <div class="container footer-bottom">
-      <p>&copy; <span id="year"></span> Villa Dream Hamburg. Alle Rechte vorbehalten.</p>
+      <p>&copy; <span id="year"></span> Villa Dream Hamburg · Alle Rechte vorbehalten</p>
+      <p class="footer-fineprint">Mit Sorgfalt entworfen in Hamburg.</p>
     </div>
   </footer>
 
