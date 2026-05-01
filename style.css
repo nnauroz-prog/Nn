@@ -79,8 +79,23 @@ em { font-style: italic; color: var(--ink); }
 .container.narrow { max-width: var(--container-narrow); }
 .center { text-align: center; }
 
-.section { padding: 9rem 0; position: relative; }
+.section { padding: 9rem 0; position: relative; z-index: 3; background: var(--pearl); }
 .section-head { margin-bottom: 5rem; }
+
+/* Stelle sicher, dass alle Inhaltssektionen über dem fixierten Hero-Video liegen */
+.section-prolog,
+.stats-strip,
+.chapter,
+.section-features,
+.section-services,
+.section-gallery,
+.section-quote,
+.section-host,
+.section-faq,
+.section-cta,
+.site-footer,
+.site-header { position: relative; z-index: 3; }
+.site-header { z-index: 100; }
 
 /* ==========================================================================
    TYPOGRAFIE
@@ -374,7 +389,7 @@ p + p { margin-top: 1rem; }
 .nav-toggle.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ==========================================================================
-   HERO
+   HERO — Cinematic fixed-background
    ========================================================================== */
 .hero {
   position: relative;
@@ -385,33 +400,57 @@ p + p { margin-top: 1rem; }
   justify-content: center;
   text-align: center;
   color: var(--white);
-  overflow: hidden;
   padding: 7rem 0 5rem;
+  z-index: 2;
+  background: transparent;
 }
 
-.hero-image {
-  position: absolute;
-  inset: 0;
+/* Fixed cinematic video background — bleibt während des Scrolls stehen */
+.hero-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  object-fit: cover;
+  object-position: center;
   z-index: 0;
+  pointer-events: none;
+  will-change: opacity, transform;
+  transition: opacity .4s linear;
+  background-color: #1a1612;
+}
+
+/* Static image fallback — gleiche Position, hinter dem Video */
+.hero-image {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+  z-index: -1;
   background-color: #2a2520;
   background-image:
     linear-gradient(180deg, rgba(15,14,13,0.45) 0%, rgba(15,14,13,0.25) 35%, rgba(15,14,13,0.78) 100%),
     url('images/saal-2.jpg');
   background-size: cover;
   background-position: center;
-  animation: heroZoom 24s var(--ease) infinite alternate;
-}
-@keyframes heroZoom {
-  from { transform: scale(1); }
-  to   { transform: scale(1.07); }
+  pointer-events: none;
 }
 
+/* Dunkler Schleier liegt ÜBER dem Video, damit Text lesbar bleibt */
 .hero-veil {
-  position: absolute;
-  inset: 0;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   z-index: 1;
+  pointer-events: none;
   background:
-    radial-gradient(ellipse at 50% 80%, rgba(15,14,13,0.55) 0%, transparent 60%);
+    linear-gradient(180deg, rgba(15,14,13,0.55) 0%, rgba(15,14,13,0.25) 35%, rgba(15,14,13,0.85) 100%),
+    radial-gradient(ellipse at 50% 60%, rgba(15,14,13,0) 0%, rgba(15,14,13,0.4) 100%);
+  transition: opacity .4s linear;
 }
 
 /* Hairline gold inner frame */
@@ -1391,6 +1430,21 @@ p + p { margin-top: 1rem; }
   .hero-meta-line { width: 30px; }
   .hero-scroll { left: 1.5rem; }
   .hero-scroll-line { width: 50px; }
+}
+
+@media (max-width: 900px) {
+  /* iOS Safari hat Probleme mit position:fixed Videos — auf Mobile Standbild */
+  .hero-video { display: none; }
+  .hero-image {
+    position: absolute;
+    height: 100%;
+    background-attachment: scroll;
+  }
+  .hero-veil {
+    position: absolute;
+    height: 100%;
+  }
+  .hero { overflow: hidden; }
 }
 
 @media (max-width: 768px) {

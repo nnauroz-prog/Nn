@@ -1,16 +1,44 @@
 /* ==========================================================================
-   Villa Dream Hamburg – Frontend Script
+   Villa Dream Hamburg — Frontend Script
    ========================================================================== */
 
 (() => {
   'use strict';
 
+  const header     = document.getElementById('siteHeader');
+  const heroVideo  = document.querySelector('.hero-video');
+  const heroVeil   = document.querySelector('.hero-veil');
+  const heroImage  = document.querySelector('.hero-image');
+
   /* ----- Header: scrolled state ----- */
-  const header = document.getElementById('siteHeader');
   const onScroll = () => {
-    if (!header) return;
-    if (window.scrollY > 30) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
+    const y = window.scrollY;
+
+    if (header) {
+      if (y > 30) header.classList.add('scrolled');
+      else        header.classList.remove('scrolled');
+    }
+
+    /* ---- Cinematic hero fade-out ----
+       Video & Veil bleiben fixed, fadern aber raus, je weiter man scrollt.
+       Bei 0 sichtbar, bei viewport-Höhe komplett unsichtbar. */
+    const vh = window.innerHeight;
+    const fade = Math.max(0, Math.min(1, 1 - (y / (vh * 0.95))));
+    const scale = 1 + (1 - fade) * 0.08;
+
+    if (heroVideo) {
+      heroVideo.style.opacity = fade;
+      heroVideo.style.transform = `scale(${scale})`;
+    }
+    if (heroImage) {
+      heroImage.style.opacity = fade;
+      heroImage.style.transform = `scale(${scale})`;
+    }
+    if (heroVeil) {
+      // Veil etwas länger sichtbar lassen für sanfteren Übergang
+      const veilFade = Math.max(0, Math.min(1, 1 - (y / (vh * 1.05))));
+      heroVeil.style.opacity = veilFade;
+    }
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -75,4 +103,16 @@
   /* ----- Footer year ----- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ----- Pause video when not in viewport (Performance) ----- */
+  if (heroVideo && 'IntersectionObserver' in window) {
+    const vio = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        heroVideo.play().catch(() => {});
+      } else {
+        heroVideo.pause();
+      }
+    }, { threshold: 0.05 });
+    vio.observe(document.querySelector('.hero'));
+  }
 })();
