@@ -508,12 +508,15 @@ p + p { margin-top: 1rem; }
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   color: var(--white);
-  /* Top-Padding muss den fixen Stack (Announce + Top-Bar + Header ~70-90px) klären */
-  padding: calc(var(--announce-h) + var(--top-bar-h) + 6rem) 0 5rem;
+  /* Top-Padding pinnt den Inhalt SICHER unter den fixen Stack
+     (Announce + Top-Bar + Header). flex-start statt center — auf
+     kurzen Viewports würde Centering sonst den Eyebrow nach oben
+     in den Header rutschen lassen. */
+  padding: calc(var(--announce-h) + var(--top-bar-h) + 9rem) 0 6rem;
   z-index: 2;
   background: transparent;
 }
