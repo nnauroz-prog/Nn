@@ -353,6 +353,9 @@ p + p { margin-top: 1rem; }
   background: rgba(255, 255, 255, 0.13);
 }
 .top-bar-item:hover { color: var(--champagne-light); }
+/* Lange / kurze Labels — auf Mobile schrumpft "Saal · Hochzeiten" zu "Saal" */
+.tb-long { display: inline; }
+.tb-short { display: none; }
 .top-bar-item.is-active {
   color: var(--white);
   position: relative;
@@ -1866,7 +1869,15 @@ p + p { margin-top: 1rem; }
 /* ==========================================================================
    SUB-PAGES (Kontakt, Impressum, Datenschutz)
    ========================================================================== */
-.page-sub { padding-top: 0; }
+/* Inhalte müssen unterhalb des fixierten Stacks (Announce + Top-Bar + Header) liegen */
+.page-sub {
+  padding-top: calc(var(--announce-h) + var(--top-bar-h) + 5rem);
+}
+@media (max-width: 900px) {
+  .page-sub {
+    padding-top: calc(var(--announce-h) + var(--top-bar-h) + 4rem);
+  }
+}
 
 .form-card {
   background: var(--white);
@@ -1985,6 +1996,11 @@ p + p { margin-top: 1rem; }
   .top-bar-item { padding: 0 0.8rem; font-size: 0.58rem; letter-spacing: 0.28em; }
   .top-bar-mark { display: none; }
   .top-bar-item.is-active::before { left: 0.8rem; right: 0.8rem; }
+  .tb-long { display: none; }
+  .tb-short { display: inline; }
+
+  /* Hero-Subtitle BR-Tags auf Mobile entfernen — Text fließt natürlich */
+  .hero-subtitle br { display: none; }
 
   .header-inner { padding: 0 1.25rem; }
 
