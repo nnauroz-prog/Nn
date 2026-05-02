@@ -13,11 +13,14 @@
   /* ----- Header: scrolled state ----- */
   const onScroll = () => {
     const y = window.scrollY;
+    const compact = y > 30;
 
     if (header) {
-      if (y > 30) header.classList.add('scrolled');
-      else        header.classList.remove('scrolled');
+      header.classList.toggle('scrolled', compact);
     }
+    /* body.is-compact blendet Announce-Bar + Top-Bar aus,
+       Header rückt an den oberen Rand */
+    document.body.classList.toggle('is-compact', compact);
 
     /* ---- Cinematic hero fade-out ----
        Video & Veil bleiben fixed, fadern aber raus, je weiter man scrollt.

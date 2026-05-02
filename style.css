@@ -275,7 +275,10 @@ p + p { margin-top: 1rem; }
   letter-spacing: 0.32em;
   text-transform: uppercase;
   text-align: center;
+  transition: transform 0.5s var(--ease);
 }
+/* Scroll: Announce-Bar gleitet nach oben weg */
+body.is-compact .announce-bar { transform: translateY(-100%); }
 .announce-inner {
   display: flex;
   align-items: center;
@@ -302,6 +305,7 @@ p + p { margin-top: 1rem; }
 .top-bar {
   position: fixed;
   top: var(--announce-h); left: 0; right: 0;
+  transition: transform 0.5s var(--ease);
   z-index: 102;
   height: var(--top-bar-h);
   background: rgba(15, 14, 13, 0.94);
@@ -365,6 +369,8 @@ p + p { margin-top: 1rem; }
   height: 1px;
   background: var(--champagne);
 }
+/* Scroll: Top-Bar gleitet auch nach oben weg, sodass nur der Header bleibt */
+body.is-compact .top-bar { transform: translateY(calc(-100% - var(--announce-h))); }
 
 /* ==========================================================================
    HEADER
@@ -375,9 +381,12 @@ p + p { margin-top: 1rem; }
   left: 0; right: 0;
   z-index: 100;
   padding: 1.5rem 0;
-  transition: all .5s var(--ease);
+  transition: top 0.5s var(--ease), background 0.4s var(--ease),
+              padding 0.4s var(--ease), border-color 0.4s var(--ease);
   background: transparent;
 }
+/* Scroll: Header rückt an den oberen Rand und bekommt sein Scrolled-Look */
+body.is-compact .site-header,
 .site-header.scrolled,
 .page-sub .site-header {
   background: rgba(251, 249, 244, 0.96);
@@ -386,6 +395,7 @@ p + p { margin-top: 1rem; }
   padding: 0.9rem 0;
   border-bottom: 1px solid rgba(184, 153, 104, 0.08);
 }
+body.is-compact .site-header { top: 0; }
 
 .header-inner {
   max-width: 1400px;
