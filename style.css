@@ -36,6 +36,7 @@
   --container-narrow: 760px;
   --gutter: 2rem;
   --radius: 0;
+  --announce-h: 36px;
   --top-bar-h: 38px;
 
   --shadow-soft:  0 30px 80px -40px rgba(20,18,16,0.18);
@@ -257,11 +258,50 @@ p + p { margin-top: 1rem; }
 .btn-link--inverse:hover { color: var(--champagne-light); }
 
 /* ==========================================================================
+   ANNOUNCE-BAR — Coming Soon
+   ========================================================================== */
+.announce-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 103;
+  height: var(--announce-h);
+  background: linear-gradient(90deg, var(--champagne-deep) 0%, var(--champagne) 50%, var(--champagne-deep) 100%);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.announce-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+.announce-mark {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0;
+}
+.announce-cta {
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  padding-bottom: 1px;
+  transition: border-color .25s var(--ease);
+}
+.announce-cta:hover { border-color: var(--white); }
+
+/* ==========================================================================
    TOP-BAR — Property switcher (Saal · Hotel · Restaurant)
    ========================================================================== */
 .top-bar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: var(--announce-h); left: 0; right: 0;
   z-index: 102;
   height: var(--top-bar-h);
   background: rgba(15, 14, 13, 0.94);
@@ -331,7 +371,7 @@ p + p { margin-top: 1rem; }
    ========================================================================== */
 .site-header {
   position: fixed;
-  top: var(--top-bar-h);
+  top: calc(var(--announce-h) + var(--top-bar-h));
   left: 0; right: 0;
   z-index: 100;
   padding: 1.5rem 0;
@@ -1055,6 +1095,9 @@ p + p { margin-top: 1rem; }
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
+.features-grid--five {
+  grid-template-columns: repeat(5, 1fr);
+}
 .feature {
   padding: 3.5rem 2rem;
   text-align: left;
@@ -1240,6 +1283,56 @@ p + p { margin-top: 1rem; }
 }
 .ed-item figcaption span:last-child {
   color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   ANLÄSSE — Wofür wir öffnen
+   ========================================================================== */
+.section-occasions {
+  background: var(--cream);
+  position: relative;
+}
+.section-occasions::before {
+  content: '';
+  position: absolute;
+  top: 5rem; left: 50%;
+  transform: translateX(-50%);
+  width: 60px; height: 1px;
+  background: var(--champagne);
+  opacity: 0.5;
+}
+.occasions-list {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.occasions-list li {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ink);
+  padding: 0.6rem 1.6rem;
+  position: relative;
+  transition: color .3s var(--ease);
+}
+.occasions-list li:not(:last-child)::after {
+  content: '·';
+  position: absolute;
+  right: -0.35rem;
+  top: 50%;
+  transform: translateY(-55%);
+  color: var(--champagne);
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+.occasions-list li:hover {
+  color: var(--champagne);
+  font-style: italic;
 }
 
 /* ==========================================================================
@@ -1881,7 +1974,12 @@ p + p { margin-top: 1rem; }
 }
 
 @media (max-width: 768px) {
-  :root { --gutter: 1.25rem; --top-bar-h: 34px; }
+  :root { --gutter: 1.25rem; --announce-h: 30px; --top-bar-h: 34px; }
+
+  .announce-bar { font-size: 0.56rem; letter-spacing: 0.22em; }
+  .announce-inner { gap: 0.6rem; padding: 0 0.5rem; }
+  .announce-mark { font-size: 0.78rem; }
+  .announce-cta { display: none; }
 
   .top-bar-inner { padding: 0 1rem; }
   .top-bar-item { padding: 0 0.8rem; font-size: 0.58rem; letter-spacing: 0.28em; }
@@ -1963,6 +2061,9 @@ p + p { margin-top: 1rem; }
   .extras-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .extra-content { padding: 2rem 1.75rem 2.25rem; }
   .extra-card h3 { font-size: 1.6rem; }
+
+  /* Anlässe */
+  .occasions-list li { font-size: 1.1rem; padding: 0.4rem 1rem; }
 
   /* Menü (Restaurant) */
   .menu-grid { grid-template-columns: 1fr; }
