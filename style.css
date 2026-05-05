@@ -382,16 +382,25 @@ body.is-compact .top-bar { transform: translateY(calc(-100% - var(--announce-h))
   z-index: 100;
   padding: 1.5rem 0;
   transition: top 0.5s var(--ease), background 0.4s var(--ease),
-              padding 0.4s var(--ease), border-color 0.4s var(--ease);
-  background: transparent;
+              padding 0.4s var(--ease), border-color 0.4s var(--ease),
+              backdrop-filter 0.4s var(--ease);
+  /* Frosted-Glass-Verlauf: dunkel oben, fadet nach transparent
+     Brand-Text liest sich klar gegen das Video, Video schimmert
+     unten subtil durch — professioneller Look ohne harte Kante */
+  background: linear-gradient(180deg,
+    rgba(15, 14, 13, 0.55) 0%,
+    rgba(15, 14, 13, 0.25) 70%,
+    rgba(15, 14, 13, 0)    100%);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  backdrop-filter: blur(10px) saturate(1.05);
 }
-/* Scroll: Header rückt an den oberen Rand und bekommt sein Scrolled-Look */
+/* Scrolled-State: Header rückt an top:0 mit hellem Backdrop */
 body.is-compact .site-header,
 .site-header.scrolled,
 .page-sub .site-header {
-  background: rgba(251, 249, 244, 0.96);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(251, 249, 244, 0.94);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  backdrop-filter: blur(14px) saturate(1.1);
   padding: 0.9rem 0;
   border-bottom: 1px solid rgba(184, 153, 104, 0.08);
 }
