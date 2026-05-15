@@ -78,44 +78,74 @@
     <div class="hero-frame" aria-hidden="true"></div>
 
     <div class="hero-content">
-      <p class="hero-eyebrow">— Property Nº 03 · Restaurant</p>
+      <p class="hero-greeting" aria-label="Willkommensgruß">
+        <span class="dari" dir="rtl" lang="fa">خوش آمدید</span>
+        <span class="dari-dot">·</span>
+        <span class="dari-trans">Property Nº 03</span>
+      </p>
       <h1 class="hero-title">
         <span class="hero-script">Restaurant</span>
         <span class="hero-serif">Afghanische Festtagsküche. Jeden Abend.</span>
       </h1>
+      <p class="hero-eyebrow hero-eyebrow--small">— Coming Soon · Frühjahr 2026 · An der Alster</p>
       <p class="hero-subtitle">
-        Aus der Küche, die auch unsere Hochzeiten bewirtet.<br />
-        Kabuli Pulao, Mantu, Bolani, Chapli Kabab — halal, hausgemacht, herzlich.
+        Aus derselben Küche, die unsere Hochzeiten bewirtet.<br />
+        Kabuli Pulao, Mantu, Bolani — halal, langsam, ehrlich.
       </p>
       <div class="hero-actions">
-        <a href="#reservieren" class="btn btn-primary">Tisch reservieren</a>
-        <a href="#menue" class="btn-link">
-          <span>Menü ansehen</span>
+        <a href="kontakt.html" class="btn btn-primary">Auf die Warteliste</a>
+        <a href="#welcome-restaurant" class="btn-link">
+          <span>Aus der Küche</span>
           <span class="arrow">→</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============ INTRO / DIE KÜCHE ============ -->
-  <section class="section section-prolog" id="kueche">
-    <div class="container narrow center">
-      <p class="chapter-label reveal">— Die Küche —</p>
-      <h2 class="display reveal">
-        Aus dem Hindukusch <em>nach Hamburg</em>.
-      </h2>
-      <p class="lead reveal">
-        Unser Restaurant kocht so, wie zu Hause gekocht wird — mit Zeit,
-        mit Geduld, mit dem Stolz, der über Generationen geht. Reis, der
-        Stunden im Topf bedeckt schwitzt. Teig, der von Hand gewickelt
-        wird. Lamm, das langsam sein darf.
-      </p>
-      <p class="lead reveal" style="margin-top:1.5rem;">
-        Alle Gerichte halal. Vegetarisch und vegan immer dabei.
-        Tisch-Reservierung empfohlen.
-      </p>
+  <!-- ============ WILLKOMMEN — Mohammad zur Küche ============ -->
+  <section class="section section-welcome" id="welcome-restaurant">
+    <div class="container narrow">
+      <div class="welcome-head reveal">
+        <p class="chapter-label">— Aus der Küche —</p>
+        <h2 class="welcome-title">
+          <span class="welcome-script">Aus dem Hindukusch.</span>
+          <span class="welcome-serif">Nach Hamburg.</span>
+        </h2>
+      </div>
+
+      <div class="welcome-letter reveal">
+        <p>
+          <span class="dropcap">B</span>ei uns daheim hat meine Mutter den
+          Kabuli Pulao über vier Stunden gekocht. Reis, der bedeckt schwitzt.
+          Lamm, das Zeit bekommt. Karotten, die karamellisiert werden, nicht
+          gerührt.
+        </p>
+        <p>
+          Genau so kochen wir hier. <em>Nicht schneller</em>, weil Hamburg
+          schneller ist. Nicht weniger, weil die Karte voll ist. Und nicht
+          fremder, weil unsere Gäste vielleicht noch kein afghanisches Essen
+          kennen — sondern <em>einladender,</em> weil sie es gleich kennen werden.
+        </p>
+        <p>
+          Alle Gerichte halal. Vegetarisch und vegan immer dabei. Reservierung
+          empfohlen — wir haben nur sechzig Plätze, und sie sind oft schon zwei
+          Wochen im Voraus weg.
+        </p>
+        <p class="welcome-signoff">
+          <span class="welcome-bisbald">— Mohammad</span>
+        </p>
+      </div>
     </div>
   </section>
+
+  <div class="ornament" aria-hidden="true">
+    <span class="ornament-line"></span>
+    <span class="ornament-mark">✦</span>
+    <span class="ornament-line"></span>
+  </div>
+
+  <!-- Anchor für „Die Küche" Navigation -->
+  <span id="kueche" aria-hidden="true"></span>
 
   <!-- ============ MENÜ ============ -->
   <section class="section section-services" id="menue">
