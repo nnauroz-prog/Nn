@@ -107,6 +107,49 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ----- Sanfter Parallax auf Kapitel-Bilder & Galerie -----
+     Bilder bewegen sich beim Scrollen leicht langsamer als die
+     Seite — wirkt teuer, ohne aufdringlich zu sein. Wird auf
+     Mobile reduziert/abgeschaltet, weil dort meist störend. */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      && window.innerWidth > 900) {
+    const parallaxEls = document.querySelectorAll(
+      '.chapter-photo, .ed-photo, .image-frame--1, .image-frame--2'
+    );
+    if (parallaxEls.length && 'IntersectionObserver' in window) {
+      const inView = new Set();
+      const pIO = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) inView.add(e.target);
+          else inView.delete(e.target);
+        });
+      }, { rootMargin: '20% 0px 20% 0px' });
+      parallaxEls.forEach(el => pIO.observe(el));
+
+      let ticking = false;
+      const updateParallax = () => {
+        ticking = false;
+        const vh = window.innerHeight;
+        inView.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          // Position relativ zur Viewport-Mitte (-0.5 ... +0.5)
+          const center = (rect.top + rect.height / 2) / vh;
+          const offset = (center - 0.5) * -60;
+          // Background-Position statt transform → keine Hover-Konflikte
+          el.style.backgroundPositionY = `calc(50% + ${offset}px)`;
+        });
+      };
+      const onScrollPara = () => {
+        if (!ticking) {
+          requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', onScrollPara, { passive: true });
+      updateParallax();
+    }
+  }
+
   /* ----- Hero-Video: zuverlässiges Autoplay -----
      Strategie: muted-State auf jeder Ebene (HTML-Attribut, JS-Property,
      volume=0) festschreiben, das Video aktiv laden und bei jedem
