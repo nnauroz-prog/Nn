@@ -1,0 +1,76 @@
+MASTERPROMPT — Medicare Pflegedienst Website
+
+Ich bin Nadim Nauroz, Gesellschafter eines ambulanten Pflegedienstes (Medicare) in Hamburg. Ich bin examinierter Pflegefachmann, Pfleger UND Teamleiter gleichzeitig. Ich bin selbstständig und will meinen eigenen Patientenstamm aufbauen. Meine Telefonnummer: 01607621876 (24/7 erreichbar). E-Mail: nnauroz@live.de.
+
+Ich brauche eine Website für ZWEI Teams mit jeweils eigener Unterseite/Bereich:
+
+Team Eilbek — Einsatzgebiete: Eilbek, Wandsbek, Barmbek-Süd, Hohenfelde, Marienthal
+Team Wilhelmsburg — Einsatzgebiete: Wilhelmsburg (+ umliegende Stadtteile)
+
+Über mich & Pflegeansatz:
+- Ich arbeite nach dem Friedemann-Modell (systemisches Pflegemodell) — Familie wird aktiv in den Pflegeprozess einbezogen
+- Ich komme persönlich zu den Patienten, kein ständiger Wechsel
+- Persönliche Ansprache auf der Seite: "Ich"-Form, nicht "Wir"
+- Kassenzugelassen, alle Kassen & Privat
+- Examinierte Fachkraft
+
+Leistungen:
+- Grundpflege (Körperpflege, An-/Auskleiden, Mobilität, Ernährung, Lagerung)
+- Behandlungspflege (Medikamente, Wundversorgung, Injektionen, Blutzucker)
+- Hauswirtschaft (Einkaufen, Kochen, Wäsche, Reinigung)
+- Verhinderungspflege (bis zu 3.539 €/Jahr Gemeinsamer Jahresbetrag)
+- Beratung & Anträge (Pflegegrad-Beantragung, Widersprüche)
+- Pflegeberatung § 37.3
+
+Aktuelle Pflegegeld-/Sachleistungsbeträge (Stand 2026):
+- PG2: 347 € Pflegegeld / 796 € Sachleistung
+- PG3: 599 € / 1.497 €
+- PG4: 800 € / 1.859 €
+- PG5: 990 € / 2.299 €
+
+Design & Technik:
+- Statische HTML/CSS/JS Seite auf GitHub Pages
+- Farbschema: Dunkelblau (#1e40af) als Primärfarbe, Teal (#0d9488) als CTA-Farbe (KEIN Orange), Türkis (#06b6d4) als Akzent
+- Farbliche Orientierung: Medicare Corporate-Farben (dunkler Header, Teal-Akzente)
+- Formspree für Kontaktformular (E-Mail an nnauroz@live.de)
+- Mein Foto ganz oben im Hero-Bereich als Erstes sichtbar
+- Persönlicher Ton, "Ich"-Ansprache durchgehend
+
+Features die eingebaut werden sollen:
+- Hero mit Foto + Name + CTA-Buttons
+- Trust-Badges Leiste (Kassenzugelassen, Alle Kassen, 24/7, Examinierte Fachkraft)
+- Grüner Puls-Punkt "Aktuell freie Kapazitäten verfügbar"
+- Leistungen-Grid (6 Karten)
+- Animierte Zähler (24/7, 100%, Stadtteile)
+- Trust-Bereich "Warum Familien mir vertrauen" (5 Punkte inkl. Familie/Friedemann)
+- Testimonials (3 Karten mit 5-Sterne — Platzhalter, echte Zitate einsetzen)
+- FAQ als Akkordeon (klickbar, auf/zu mit Chevron-Animation, türkiser Akzent-Rand)
+- Pflege-Tipps Sektion (Sturzprävention, Schmerzmanagement, Dekubitus, Pneumonie)
+- Floating WhatsApp-Button (grün, pulsierend)
+- Mobile Call-Bar (Teal, nur auf Handy sichtbar)
+- Back-to-Top Button
+- Cookie/DSGVO-Banner (localStorage, verschwindet nach "Verstanden")
+- Scroll-Animationen (IntersectionObserver)
+- Schema.org JSON-LD (MedicalBusiness + FAQPage)
+- Open Graph Meta-Tags
+- Favicon (SVG)
+- SEO-optimiert mit Name "Nadim Nauroz" in Titles, Meta, H1, Schema
+
+Seiten:
+- index.html (Hauptseite mit Team-Auswahl)
+- kontakt.html (Formular mit Formspree)
+- danke.html (nach Formular-Absendung)
+- impressum.html (Nadim Nauroz als Verantwortlicher)
+- datenschutz.html (DSGVO-konform, Formspree als Auftragsverarbeiter)
+- leistungen.html (Pflegegrade, Sachleistungen, Rechte)
+- praevention.html
+- pflegepolitik.html
+- digitalisierung.html
+
+Wichtig:
+- Kein "Hamm" als Stadtteil
+- Foto von mir (IMG_7363.jpeg) als erstes Element auf der Seite
+- Alle Sub-Seiten haben: Favicon, WhatsApp-Button, Back-to-Top, Mobile-Call-Bar, Cookie-Banner, script.js
+- Footer: "Nadim Nauroz — Ihr Pflegefachmann in Hamburg"
+- Alle Inline-Scripts durch externe script.js ersetzen
+- Responsive Design für Mobile und Desktop
